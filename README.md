@@ -1,0 +1,91 @@
+# Howzit? Co-working space & Social House: website
+
+A single-page, mobile-first static marketing site for **Howzit?**, a coworking house and social house in Sea Point, Cape Town.
+Plain HTML, CSS and a little vanilla JavaScript. There's **no build step**, so it can be served as-is by GitHub Pages (or any static host).
+
+> Live site: **https://howzit-socialhouse.github.io/**. Prices shown are launch prices (ZAR, incl. VAT where applicable) and may change.
+
+> **Privacy:** the site deliberately shows the location only as **Sea Point, Cape Town**. Do not add a street address, house number, postal code, GPS coordinates, map pin, phone number, email address or property-listing links/IDs anywhere (HTML, JSON-LD, meta tags, alt text, file names, README/CREDITS). Exact directions are shared privately when someone books a visit.
+
+## Structure
+
+```
+howzit-socialhouse.github.io/
+├── index.html              # the whole site (single page, smooth-scroll sections)
+├── assets/
+│   ├── css/styles.css      # all styles (design tokens at the top in :root)
+│   ├── js/main.js          # menu, scroll reveals, nav highlight, sticky mobile bar, form → Formspree
+│   └── img/                # optimised JPEGs (<~290 KB each; AI scenes in -800/-1280 sizes, real photos + -600 thumbs), logos, og-image.jpg
+├── favicon.svg             # main favicon (SVG)
+├── favicon-32.png          # PNG favicon fallback
+├── apple-touch-icon.png    # iOS home-screen icon (180×180)
+├── robots.txt
+├── sitemap.xml
+├── CREDITS.md              # what each image is (real photo vs AI-styled visualisation)
+├── README.md
+└── .nojekyll               # tells GitHub Pages to serve files as-is (no Jekyll processing)
+```
+
+### Page sections (in order)
+1. **Top bar + sticky header**: logo, nav, "Day pass" and "Book a visit" buttons (hamburger menu on tablet/mobile).
+2. **Hero**: "Work from a house, not an office." with the pool scene in an arch, a round inset of the real pool, a handwritten "5 min to the Prom!" note, location pills and two calls to action.
+3. **Marquee**: hot desks · private offices · pool · garden · braai · yoga · board games · workshops · nomad storage.
+4. **The House** (`#house`): photo bento (lounge, the house, kitchen), the essentials (fibre, backup power, coffee, lockers, people, "Co-barking 🐾" pet-friendly) and a **"Take a peek inside the house"** gallery of real photos with a lightbox.
+5. **Work** (`#work`): a **Summer (Nov–Apr) / Winter (May–Oct) price toggle**, hot desk (day / weekly / 10-day pack / monthly + summer season pass or winter rate), the 2 private offices (+ day office), and meeting & workshop space hire (hour / half day / full day / evening). Prices are launch prices, incl. VAT where applicable.
+6. **Nomad storage** (`#storage`): seasonal luggage and belongings storage for the Cape Town winter, with prices (per bag/box per month, winter season bundle, member discount), 4 "how it works" steps, what's included and what to know.
+7. **Social House** (`#social`): bento (braai by the pool, garden yoga, sundowners on the Prom, board games, work by the pool, courses & workshops) and a calendar-style list of **planned** programme ideas, clearly labelled as ideas rather than a fixed schedule.
+8. **Location** (`#location`): Sea Point copy, walking times, a neighbourhood-only location card ("Sea Point, Cape Town"; directions shared on booking) and an OpenStreetMap embed of the Sea Point area with **no marker**.
+9. **FAQ** (`#faq`): accessible `<details>` accordion.
+10. **Contact / booking** (`#contact`): reply-time note ("We reply within 24 hours"), "Sea Point, Cape Town", a dog-friendly note and a Formspree enquiry form (name, email, optional WhatsApp/phone, interest chips: hot desk / private office / storage / events / other, message).
+11. **Footer**: links, contact info and the note "Some lifestyle images are AI-styled visualisations of the house."
+12. **Sticky mobile action bar** (≤760px wide): Day pass + Book a visit. It hides when the contact form or footer is on screen.
+
+Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the matching interest chip in the enquiry form (mapping in `PLAN_TO_INTEREST` in `main.js`) and sends the exact plan in a hidden `plan` field.
+
+## Editing the site
+
+| What | Where | Notes |
+|---|---|---|
+| **Site base URL** | `index.html` (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD `@id`/`url`/`image`/`logo`), `robots.txt`, `sitemap.xml` | `https://howzit-socialhouse.github.io/` (served from the repo root; all asset paths are relative) |
+| Launch prices | `#work`, `#storage`, FAQ, `#social` note, JSON-LD `priceRange` | Day pass R395 summer / R325 winter · weekly R1,650 / R1,350 · 10-day pack R2,950 · monthly R3,650 / R2,850 · summer season pass R9,950 · Office 1 R13,950 · Office 2 R9,950 · day office R950 · space hire R450/h, R1,450 half day, R2,650 full day, R1,650 evening · storage R295 per item/month, winter bundle R2,450 (+R895 per extra item) · members 20% off hire and storage |
+| Season dates | `#work` toggle + fine print; `main.js` picks the current season by month | Summer = 1 Nov–30 Apr, Winter = 1 May–31 Oct. To change, edit the `m >= 4 && m <= 9` test in `main.js` and the labels. |
+| Changing a seasonal price | `index.html` | Each seasonal price is `<span class="s-sum">…</span><span class="s-win">…</span>`; edit both. Without JS both prices are shown. |
+| Office sizes | `#work` | "Approx. 3–4 desks" / "Approx. 2–3 desks" |
+| Social House programme | `#social` calendar | Planned ideas, labelled "not a fixed schedule". Replace with real dates once events are running. |
+| Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = OpenStreetMap embed of the whole Sea Point area, no marker. |
+| **Formspree endpoint** | `index.html`, `action` of `#booking-form` | `FORMSPREE_ENDPOINT_PLACEHOLDER` → replace with `https://formspree.io/f/<form-id>` |
+| Photos | `assets/img/*.jpg` | Real photos of the house (`real-*.jpg`) plus AI-styled visualisations (`*-800.jpg` / `*-1280.jpg`). Update the `alt` text and `CREDITS.md` when you swap them. |
+| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-09` |
+
+### Map (privacy)
+The `#location` map is an OpenStreetMap embed of the Sea Point area (bounding box only, **no marker**) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
+
+### Enquiry form (Formspree)
+The form posts to the Formspree endpoint in its `action` attribute (`FORMSPREE_ENDPOINT_PLACEHOLDER` until it is set). Fields: `name`, `email`, `phone` (optional), `interest`, `message`, plus hidden `plan`, `prices_viewed` (the season whose prices were on screen) and `_subject` = "New Howzit? website enquiry". `_gotcha` is Formspree's honeypot spam trap (hidden; bots fill it in). `assets/js/main.js` validates name/email/message, submits with `fetch()` (POST, `Accept: application/json`) and shows an inline success or error message, so there's no redirect. Without JavaScript the browser posts the form normally.
+1. Create a form at formspree.io (choose the inbox that should receive enquiries; that address is never shown on the site).
+2. Replace `FORMSPREE_ENDPOINT_PLACEHOLDER` in `index.html` with the endpoint, e.g. `https://formspree.io/f/abcdwxyz`.
+3. Send a test enquiry from the live site and confirm the first submission in Formspree.
+
+## Publishing on GitHub Pages
+1. The repository is published from `main` / `(root)` (Settings → Pages → "Deploy from a branch"). `index.html` sits at the repo root and `.nojekyll` makes Pages serve files as-is.
+2. The site lives at `https://howzit-socialhouse.github.io/`. If you add a custom domain later (Settings → Pages → Custom domain), update the URLs in `index.html`, `robots.txt` and `sitemap.xml`.
+3. Submit `sitemap.xml` in Google Search Console and create a Google Business Profile for local search ("coworking space Sea Point"), keeping the address hidden (service-area business).
+
+## Preview locally
+```
+python3 -m http.server 8000
+# open http://localhost:8000
+```
+
+## SEO checklist (included)
+- Descriptive `<title>` and meta description with "coworking space Sea Point" / "Cape Town coworking"
+- Semantic landmarks (`header`, `nav`, `main`, `section`, `footer`), one `<h1>`, keyword-relevant `<h2>`s
+- Open Graph and Twitter card tags with a 1200×630 `og-image.jpg`
+- schema.org `LocalBusiness` JSON-LD (`additionalType` Coworking; locality only, no street address, coordinates, phone or email)
+- `robots.txt`, `sitemap.xml`, canonical URL, `lang="en-ZA"`
+- Alt text on every image, lazy-loading below the fold, preloaded hero image, compressed progressive JPEGs with `srcset`
+
+## Design notes
+- Fonts: **Fraunces** (soft, characterful serif for headings), **DM Sans** (body), **Caveat** (handwritten notes), all from Google Fonts.
+- Colours (`:root` in `styles.css`): cream `#FBF6EE`, sand `#F3E8D6`, terracotta `#C4613A`, sage `#E4E8D5`/`#8FA07B`, ocean `#1F5A6B`, sun `#F2B84B`, ink `#2B211C`.
+- Animations respect `prefers-reduced-motion`.

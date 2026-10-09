@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://howzit-socialhouse.github.io/sitemap.xml
