@@ -153,7 +153,7 @@
 
   /* Lightbox for the real "peek inside" photos (links still work without JS) */
   var lb = document.getElementById("lightbox");
-  var items = Array.prototype.slice.call(document.querySelectorAll(".peek-item"));
+  var items = Array.prototype.slice.call(document.querySelectorAll("a.peek-item"));
   if (lb && typeof lb.showModal === "function" && items.length) {
     var lbCap = lb.querySelector("figcaption"), lbImg = document.createElement("img"), idx = 0, opener = null;
     lbCap.parentNode.insertBefore(lbImg, lbCap);
