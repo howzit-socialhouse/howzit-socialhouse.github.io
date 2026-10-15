@@ -85,7 +85,7 @@
   var PLAN_TO_INTEREST = {
     "Day pass": "Hot desk", "Hot desk, weekly": "Hot desk", "Hot desk, 10-day pack": "Hot desk",
     "Hot desk, monthly": "Hot desk", "Summer season pass": "Hot desk",
-    "Private office": "Private office", "Co-living, en-suite room": "Co-living", "Co-living, shared-bathroom room": "Co-living", "Nomad storage": "Storage",
+    "Private office": "Private office", "Co-living, en-suite room": "Co-living", "Co-living, shared-bathroom room": "Co-living", "Nomad storage": "Storage", "Luggage drop": "Luggage drop",
     "Meeting / workshop space": "Events", "Social events": "Events"
   };
   document.querySelectorAll("[data-plan]").forEach(function (el) {
