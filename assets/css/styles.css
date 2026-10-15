@@ -719,3 +719,23 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .season-toggle button[aria-pressed="true"] small { color: var(--cream); }
 .price-opt.is-popular .opt-note { color: rgba(251,246,238,.85); }
 .price-opt.is-popular .opt-price small, .price-opt.is-popular .opt-name { color: rgba(251,246,238,.85); }
+
+/* ---- Co-living ---- */
+.coliving-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.room-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+.room-card .plan-photo { aspect-ratio: 4 / 3; }
+.room-card .plan-body { display: flex; flex-direction: column; flex: 1; }
+.room-card h3 { margin: 0 0 6px; }
+.room-rates { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 16px 0 22px; flex: 1; align-content: start; }
+.room-rates > div { display: flex; flex-direction: column; gap: 4px; padding: 14px 16px; border-radius: var(--r); background: var(--sand); }
+.room-rates span { font-weight: 600; }
+.room-rates span small, .room-rates > div > small { color: var(--ink-soft); font-size: .82rem; font-weight: 400; }
+.room-rates b { font-family: var(--font-display); font-size: 1.3rem; white-space: nowrap; }
+.room-rates b small { font-size: .78rem; font-weight: 400; }
+.coliving-incl { list-style: none; padding: 0; margin: 28px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; }
+.coliving-incl li { display: flex; align-items: center; gap: 8px; }
+@media (max-width: 760px) {
+  .coliving-grid { grid-template-columns: 1fr; }
+  .room-rates { grid-template-columns: 1fr; }
+  .coliving-incl { justify-content: flex-start; flex-direction: column; }
+}
