@@ -758,3 +758,23 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
   .ld-row b::before { content: attr(data-l); display: block; font-family: var(--font-body, inherit); font-size: .75rem; font-weight: 400; color: var(--ink-soft); }
   .ld-steps { grid-template-columns: 1fr; }
 }
+
+/* ---- Co-barking ---- */
+.cb-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px; align-items: start; }
+.cb-card { position: relative; }
+.cb-card h3 { margin: 0 0 8px; font-family: var(--font-display); font-size: 1.5rem; }
+.cb-tag { display: inline-block; margin-bottom: 12px; padding: 4px 12px; border-radius: 999px; background: var(--sage-l); font-weight: 600; font-size: .85rem; }
+.cb-paid .cb-tag { background: var(--sun); }
+.cb-list { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 8px; }
+.cb-list li { display: flex; gap: 8px; align-items: center; }
+.cb-rates { margin: 16px 0 10px; }
+.cb-annual { display: flex; gap: 12px; align-items: flex-start; margin: 24px 0 0; padding: 18px 20px; border-radius: var(--r); background: var(--cream); border: 2px dashed var(--sun); }
+.cb-annual .icon { flex: none; width: 24px; height: 24px; margin-top: 2px; }
+.cb-rules { margin-top: 24px; }
+.cb-rules h4 { margin: 0 0 10px; }
+.cb-rules ul { margin: 0; padding-left: 1.2em; display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px 28px; }
+@media (max-width: 760px) {
+  .cb-grid { grid-template-columns: 1fr; }
+  .cb-rules ul { grid-template-columns: 1fr; }
+}
+.price-opt.opt-yearly { grid-column: 1 / -1; }
