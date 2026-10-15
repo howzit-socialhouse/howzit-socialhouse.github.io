@@ -705,14 +705,16 @@
 
         <div class="form-card">
           <!--
-            FORM HANDLING: Formspree (https://formspree.io)
+            FORM HANDLING: Web3Forms (https://web3forms.com), public access key below
             Replace FORMSPREE_ENDPOINT_PLACEHOLDER in the form action with your form endpoint
             (https://formspree.io/f/<form-id>). assets/js/main.js submits the form with fetch()
             (POST, Accept: application/json) and shows an inline success/error message.
             Without JavaScript it posts normally. "_gotcha" is Formspree's honeypot field.
           -->
-          <form id="booking-form" class="booking-form" action="FORMSPREE_ENDPOINT_PLACEHOLDER" method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New Howzit? website enquiry">
+          <form id="booking-form" class="booking-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="5084d06a-881f-43cb-b93f-f77ab39dcbbe">
+            <input type="hidden" name="subject" value="New Howzit? website enquiry">
+            <input type="hidden" name="from_name" value="Howzit? website">
             <input type="hidden" name="plan" value="">
             <input type="hidden" name="prices_viewed" value="">
             <div class="hp-field" aria-hidden="true">

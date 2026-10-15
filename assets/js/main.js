@@ -98,7 +98,7 @@
     });
   });
 
-  /* Enquiry form: submit to Formspree with fetch() and show an inline message (no redirect).
+  /* Enquiry form: submit to Web3Forms with fetch() and show an inline message (no redirect).
      The endpoint is the form's action attribute in index.html (see README.md). */
   var status = document.getElementById("form-status");
   var btn = form.querySelector('button[type="submit"]');
