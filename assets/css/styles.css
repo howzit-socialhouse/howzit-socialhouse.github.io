@@ -784,3 +784,10 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .wa-float{position:fixed;right:20px;bottom:20px;z-index:999;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.22);transition:transform .2s}
 .wa-float:hover{transform:scale(1.08)}
 @media (max-width:600px){.wa-float{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:52px;height:52px}}
+
+/* Instagram */
+.ig-link{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;color:inherit;transition:background .2s,color .2s}
+.ig-link:hover{background:rgba(0,0,0,.06);color:#c13584}
+.nav-ctas{align-items:center}
+.footer-social{margin-top:12px}
+.ig-footer{border:1.5px solid currentColor}
