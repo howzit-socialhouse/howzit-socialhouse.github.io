@@ -32,7 +32,7 @@
         links.forEach(function (a) { a.classList.toggle("is-active", a.getAttribute("href") === "#" + entry.target.id); });
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
-    links.forEach(function (a) { var s = document.querySelector(a.getAttribute("href")); if (s) spy.observe(s); });
+    links.forEach(function (a) { var h = a.getAttribute("href"); if (h.charAt(0) !== "#") return; var s = document.querySelector(h); if (s) spy.observe(s); });
 
     /* Gentle staggered reveal on scroll */
     var groups = [".section-head", ".tile", ".essentials li", ".peek-head", ".peek-strip li", ".plan", ".storage-intro > *", ".steps li", ".storage-details > div", ".s-tile", ".calendar", ".location-copy", ".map-card", ".faq-list details", ".contact-info", ".form-card"];
@@ -82,6 +82,7 @@
   /* Any [data-plan] link pre-selects the matching interest chip in the enquiry form
      and remembers the exact plan (sent as the hidden "plan" field). */
   var form = document.getElementById("booking-form");
+  if (form) {
   var PLAN_TO_INTEREST = {
     "Day pass": "Hot desk", "Hot desk, weekly": "Hot desk", "Hot desk, 10-day pack": "Hot desk",
     "Hot desk, monthly": "Hot desk", "Hot desk, yearly": "Hot desk", "Private office, yearly": "Private office", "Summer season pass": "Hot desk",
@@ -150,6 +151,8 @@
       })
       .then(function () { btn.disabled = false; btn.removeAttribute("aria-busy"); btn.innerHTML = btnHTML; });
   });
+
+  }
 
   /* Lightbox for the real "peek inside" photos (links still work without JS) */
   var lb = document.getElementById("lightbox");
