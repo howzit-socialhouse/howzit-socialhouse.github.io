@@ -816,3 +816,4 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .lp-links a:hover { color: var(--terracotta-d); }
 .lp-links small { display: block; font-weight: 400; color: var(--ink-soft); }
 @media (max-width: 860px) { .lp-hero-grid { grid-template-columns: 1fr; } }
+.lp-section, #hot-desks, #private-offices, #dog-friendly, #nomad-storage { scroll-margin-top: 110px; }
