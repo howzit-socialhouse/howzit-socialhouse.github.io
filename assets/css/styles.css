@@ -817,3 +817,15 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .lp-links small { display: block; font-weight: 400; color: var(--ink-soft); }
 @media (max-width: 860px) { .lp-hero-grid { grid-template-columns: 1fr; } }
 .lp-section, #hot-desks, #private-offices, #dog-friendly, #nomad-storage { scroll-margin-top: 110px; }
+/* Find your fit */
+.fit-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.fit-card { background: var(--sand); border-radius: var(--r); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.fit-card h3 { margin: 0; font-family: var(--font-display); font-size: 1.35rem; line-height: 1.2; }
+.fit-card p { margin: 0; }
+.fit-who { font: 700 .78rem/1.3 var(--font-body); letter-spacing: .14em; text-transform: uppercase; color: var(--terracotta-d); }
+.fit-offer { padding: 10px 12px; background: var(--cream); border-radius: var(--r-sm); }
+.fit-link { margin-top: auto; font-weight: 700; color: var(--terracotta-d); display: inline-flex; align-items: center; gap: 6px; }
+.fit-link .icon { width: 18px; height: 18px; }
+.offer-callout { margin: 22px 0; padding: 18px 20px; border-left: 5px solid var(--terracotta); background: var(--cream); border-radius: var(--r-sm); }
+.offer-callout h3 { margin: 0 0 6px; font-family: var(--font-display); }
+.offer-callout p { margin: 0; }

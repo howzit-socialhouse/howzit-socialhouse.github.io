@@ -89,3 +89,9 @@ python3 -m http.server 8000
 - Fonts: **Fraunces** (soft, characterful serif for headings), **DM Sans** (body), **Caveat** (handwritten notes), all from Google Fonts.
 - Colours (`:root` in `styles.css`): cream `#FBF6EE`, sand `#F3E8D6`, terracotta `#C4613A`, sage `#E4E8D5`/`#8FA07B`, ocean `#1F5A6B`, sun `#F2B84B`, ink `#2B211C`.
 - Animations respect `prefers-reduced-motion`.
+
+## Pricing logic (updated 2026-10-16)
+All prices ZAR incl. VAT where applicable, launch prices. Existing rates are unchanged; the marketing plan's figures (R9,950 summer pass, R2,450 winter bundle, R65/4 h luggage drop, R950 day office) all match the site.
+- Bundles = sum of standard rates minus a discount for committing up front: 10-day pack R2,950 = 10 x R395 summer day pass less 25%; summer season pass R9,950 = 3 x R3,650 summer monthly less R1,000 (~9%); winter storage bundle R2,450 = 2 items x R295 x 6 months (R3,540) less ~31%.
+- Pet fee (bringing your own dog, you supervise) = 25% of the matching pet-sitting rate: R95/day (25% of R380 full day), R950/month (25% of R3,800 monthly weekdays). Second dog +50%, same as pet sitting. Free only on annual (yearly) hot desk or private office memberships.
+- Day pass + dog = day pass + daily pet fee, no extra discount: R490 summer (R395 + R95), R420 winter (R325 + R95).
