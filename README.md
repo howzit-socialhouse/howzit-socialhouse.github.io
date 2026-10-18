@@ -31,7 +31,7 @@ howzit-socialhouse.github.io/
 1. **Top bar + sticky header**: logo, nav, "Day pass" and "Book a visit" buttons (hamburger menu on tablet/mobile).
 2. **Hero**: "Work from a house, not an office." with the pool scene in an arch, a round inset of the real pool, a handwritten "5 min to the Prom!" note, location pills and two calls to action.
 3. **Marquee**: hot desks · private offices · pool · garden · braai · yoga · board games · workshops · nomad storage.
-4. **The House** (`#house`): photo bento (lounge, the house, kitchen), the essentials (fibre, backup power, coffee, lockers, people, "Co-barking 🐾" pet-friendly) and a **"Take a peek inside the house"** gallery of real photos with a lightbox.
+4. **The House** (`#house`): photo bento (lounge, the house, kitchen), the essentials (fibre, coffee, lockers, people, parking, "Co-barking 🐾" pet-friendly) and a **"Take a peek inside the house"** gallery of real photos with a lightbox.
 5. **Work** (`#work`): a **Summer (Nov–Apr) / Winter (May–Oct) price toggle**, hot desk (day / weekly / 10-day pack / monthly + summer season pass or winter rate), the 3 private offices (+ day office), and meeting & workshop space hire (hour / half day / full day / evening). Prices are launch prices, incl. VAT where applicable.
 6. **Nomad storage** (`#storage`): seasonal luggage and belongings storage for the Cape Town winter, with prices (per bag/box per month, winter season bundle, member discount), 4 "how it works" steps, what's included and what to know.
 7. **Social House** (`#social`): bento (braai by the pool, garden yoga, sundowners on the Prom, board games, work by the pool, courses & workshops) and a calendar-style list of **planned** programme ideas, clearly labelled as ideas rather than a fixed schedule.
