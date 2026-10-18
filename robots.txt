@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://howzit-socialhouse.github.io/sitemap.xml
+Sitemap: https://howzitseapoint.co.za/sitemap.xml

@@ -3,7 +3,7 @@
 A single-page, mobile-first static marketing site for **Howzit?**, a coworking house and social house in Sea Point, Cape Town.
 Plain HTML, CSS and a little vanilla JavaScript. There's **no build step**, so it can be served as-is by GitHub Pages (or any static host).
 
-> Live site: **https://howzit-socialhouse.github.io/**. Prices shown are launch prices (ZAR, incl. VAT where applicable) and may change.
+> Live site: **https://howzitseapoint.co.za/**. Prices shown are launch prices (ZAR, incl. VAT where applicable) and may change.
 
 > **Privacy:** the site deliberately shows the location only as **Sea Point, Cape Town**. Do not add a street address, house number, postal code, GPS coordinates, map pin, phone number, email address or property-listing links/IDs anywhere (HTML, JSON-LD, meta tags, alt text, file names, README/CREDITS). Exact directions are shared privately when someone books a visit.
 
@@ -19,6 +19,7 @@ howzit-socialhouse.github.io/
 ├── favicon.svg             # main favicon (SVG)
 ├── favicon-32.png          # PNG favicon fallback
 ├── apple-touch-icon.png    # iOS home-screen icon (180×180)
+├── CNAME                   # custom domain for GitHub Pages (howzitseapoint.co.za)
 ├── robots.txt
 ├── sitemap.xml
 ├── CREDITS.md              # what each image is (real photo vs AI-styled visualisation)
@@ -46,7 +47,7 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 
 | What | Where | Notes |
 |---|---|---|
-| **Site base URL** | `index.html` (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD `@id`/`url`/`image`/`logo`), `robots.txt`, `sitemap.xml` | `https://howzit-socialhouse.github.io/` (served from the repo root; all asset paths are relative) |
+| **Site base URL** | `CNAME`, every page's `index.html` (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD `@id`/`url`/`image`/`logo`), `robots.txt`, `sitemap.xml` | `https://howzitseapoint.co.za/` (served from the repo root; all asset paths are relative) |
 | Launch prices | `#work`, `#storage`, FAQ, `#social` note, JSON-LD `priceRange` | Day pass R395 summer / R325 winter · weekly R1,650 / R1,350 · 10-day pack R2,950 · monthly R3,650 / R2,850 · summer season pass R9,950 · Office 1 R13,950 · Office 2 R9,950 · day office R950 · space hire R450/h, R1,450 half day, R2,650 full day, R1,650 evening · storage R295 per item/month, winter bundle R2,450 (+R895 per extra item) · members 20% off hire and storage |
 | Season dates | `#work` toggle + fine print; `main.js` picks the current season by month | Summer = 1 Nov–30 Apr, Winter = 1 May–31 Oct. To change, edit the `m >= 4 && m <= 9` test in `main.js` and the labels. |
 | Changing a seasonal price | `index.html` | Each seasonal price is `<span class="s-sum">…</span><span class="s-win">…</span>`; edit both. Without JS both prices are shown. |
@@ -55,7 +56,7 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 | Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = OpenStreetMap embed of the whole Sea Point area, no marker. |
 | **Formspree endpoint** | `index.html`, `action` of `#booking-form` | `FORMSPREE_ENDPOINT_PLACEHOLDER` → replace with `https://formspree.io/f/<form-id>` |
 | Photos | `assets/img/*.jpg` | Real photos of the house (`real-*.jpg`) plus AI-styled visualisations (`*-800.jpg` / `*-1280.jpg`). Update the `alt` text and `CREDITS.md` when you swap them. |
-| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-09` |
+| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-18` |
 
 ### Map (privacy)
 The `#location` map is an OpenStreetMap embed of the Sea Point area (bounding box only, **no marker**) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
@@ -68,7 +69,7 @@ The form posts to the Formspree endpoint in its `action` attribute (`FORMSPREE_E
 
 ## Publishing on GitHub Pages
 1. The repository is published from `main` / `(root)` (Settings → Pages → "Deploy from a branch"). `index.html` sits at the repo root and `.nojekyll` makes Pages serve files as-is.
-2. The site lives at `https://howzit-socialhouse.github.io/`. If you add a custom domain later (Settings → Pages → Custom domain), update the URLs in `index.html`, `robots.txt` and `sitemap.xml`.
+2. The site lives at the custom domain `https://howzitseapoint.co.za/` (set via the `CNAME` file and Settings → Pages → Custom domain; DNS: apex A records to GitHub Pages 185.199.108–111.153, `www` CNAME to `howzit-socialhouse.github.io`). `https://howzit-socialhouse.github.io/` redirects to it. If the domain ever changes, update the `CNAME` file and the absolute URLs in every page's `<head>`/JSON-LD, `robots.txt` and `sitemap.xml`.
 3. Submit `sitemap.xml` in Google Search Console and create a Google Business Profile for local search ("coworking space Sea Point"), keeping the address hidden (service-area business).
 
 ## Preview locally
