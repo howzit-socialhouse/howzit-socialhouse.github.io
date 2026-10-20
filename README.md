@@ -46,6 +46,12 @@ Order follows business priority: Hero → Hot desks (+ price-match offer) → Pr
 
 Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the matching interest chip in the enquiry form (mapping in `PLAN_TO_INTEREST` in `main.js`) and sends the exact plan in a hidden `plan` field.
 
+## Performance notes (Oct 2026)
+- **CSS:** edit `assets/css/styles.css`, then regenerate the file the pages load: `npx csso-cli --no-restructure assets/css/styles.css -o assets/css/styles.min.css`.
+- **Images:** every JPEG has a WebP twin (`*.webp`, quality 75) served via `<picture>`; the JPEG stays as the fallback. When you swap a photo, regenerate its `.webp` too (e.g. Pillow `Image.save(..., "WEBP", quality=75, method=6)`). `og-image.jpg` stays JPEG for social previews.
+- **Fonts:** Caveat (hand-written notes) loads as a small subset via `&text=` in each page's `<head>`. If you add a hand-note with new capital letters or symbols, add them to that `text=` list.
+- **Pages:** `/private-offices-sea-point/` (new, Oct 2026) and a branded `404.html`. Keep `sitemap.xml` in sync when adding pages.
+
 ## Editing the site
 
 | What | Where | Notes |

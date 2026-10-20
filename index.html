@@ -34,9 +34,11 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="assets/img/pool-work-1280.jpg" imagesrcset="assets/img/pool-work-800.jpg 800w, assets/img/pool-work-1280.jpg 1280w" imagesizes="(max-width: 1040px) 90vw, 560px" fetchpriority="high">
-  <link rel="stylesheet" href="assets/css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&display=swap" rel="stylesheet">
+  <!-- Caveat is only used for a few short hand-written notes, so it loads as a small subset. Add any new letters to text= -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap&text=%20%21%2C-.%3F%27%26abcdefghijklmnopqrstuvwxyz0123456789ELOPS" rel="stylesheet">
+  <link rel="preload" as="image" type="image/webp" href="assets/img/pool-work-1280.webp" imagesrcset="assets/img/pool-work-800.webp 800w, assets/img/pool-work-1280.webp 1280w" imagesizes="(max-width: 1040px) 90vw, 560px" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
 
   <!-- schema.org structured data. Privacy: only the neighbourhood (Sea Point, Cape Town) is published; no street address, coordinates, phone or email. -->
   <script type="application/ld+json">
@@ -186,10 +188,10 @@
         </div>
         <div class="hero-visual">
           <figure class="hero-arch">
-            <img src="assets/img/pool-work-1280.jpg" srcset="assets/img/pool-work-800.jpg 800w, assets/img/pool-work-1280.jpg 1280w" sizes="(max-width: 1040px) 90vw, 560px" width="1280" height="720" fetchpriority="high" decoding="async" alt="AI-styled visualisation of coworking in Cape Town at Howzit?, Sea Point: a man dangles his feet in the kidney-shaped pool with a coffee while two others work on laptops under the shaded veranda">
+            <picture><source type="image/webp" srcset="assets/img/pool-work-800.webp 800w, assets/img/pool-work-1280.webp 1280w" sizes="(max-width: 1040px) 90vw, 560px"><img src="assets/img/pool-work-1280.jpg" srcset="assets/img/pool-work-800.jpg 800w, assets/img/pool-work-1280.jpg 1280w" sizes="(max-width: 1040px) 90vw, 560px" width="1280" height="720" fetchpriority="high" decoding="async" alt="AI-styled visualisation of coworking in Cape Town at Howzit?, Sea Point: a man dangles his feet in the kidney-shaped pool with a coffee while two others work on laptops under the shaded veranda"></picture>
           </figure>
           <figure class="hero-circle">
-            <img src="assets/img/real-pool-circle.jpg" width="470" height="470" decoding="async" alt="The real kidney-shaped pool at the house, with brick paving and garden trees">
+            <picture><source type="image/webp" srcset="assets/img/real-pool-circle.webp"><img src="assets/img/real-pool-circle.jpg" width="470" height="470" decoding="async" alt="The real kidney-shaped pool at the house, with brick paving and garden trees"></picture>
           </figure>
           <p class="hand-note hero-note" aria-hidden="true"><svg viewBox="0 0 60 36"><path d="M56 26C42 32 22 30 6 12M6 12l3 12M6 12l12 1"/></svg>5 min to the Prom!</p>
           <div class="spin-badge" aria-hidden="true">
@@ -235,7 +237,7 @@
 
         <article class="plan desk-card">
           <figure class="plan-photo">
-            <img src="assets/img/hot-desks-1280.jpg" srcset="assets/img/hot-desks-800.jpg 800w, assets/img/hot-desks-1280.jpg 1280w" sizes="(max-width: 1040px) 92vw, 520px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of hot desks at Howzit?, a coworking space in Sea Point, Cape Town: four people working on laptops at shared wooden desks in a bright room with tall windows, wooden floors and a chandelier">
+            <picture><source type="image/webp" srcset="assets/img/hot-desks-800.webp 800w, assets/img/hot-desks-1280.webp 1280w" sizes="(max-width: 1040px) 92vw, 520px"><img src="assets/img/hot-desks-1280.jpg" srcset="assets/img/hot-desks-800.jpg 800w, assets/img/hot-desks-1280.jpg 1280w" sizes="(max-width: 1040px) 92vw, 520px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of hot desks at Howzit?, a coworking space in Sea Point, Cape Town: four people working on laptops at shared wooden desks in a bright room with tall windows, wooden floors and a chandelier"></picture>
           </figure>
           <div class="plan-body">
             <div class="plan-head">
@@ -317,7 +319,7 @@
         </div>
         <article class="plan office-card">
           <figure class="plan-photo">
-            <img src="assets/img/private-office-1280.jpg" srcset="assets/img/private-office-800.jpg 800w, assets/img/private-office-1280.jpg 1280w" sizes="(max-width: 1040px) 92vw, 520px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of a private office at Howzit? coworking, Sea Point, Cape Town: two people working side by side at a long desk with dual monitors in a private office with built-in wooden cupboards and a garden window">
+            <picture><source type="image/webp" srcset="assets/img/private-office-800.webp 800w, assets/img/private-office-1280.webp 1280w" sizes="(max-width: 1040px) 92vw, 520px"><img src="assets/img/private-office-1280.jpg" srcset="assets/img/private-office-800.jpg 800w, assets/img/private-office-1280.jpg 1280w" sizes="(max-width: 1040px) 92vw, 520px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of a private office at Howzit? coworking, Sea Point, Cape Town: two people working side by side at a long desk with dual monitors in a private office with built-in wooden cupboards and a garden window"></picture>
             <span class="sticker">Only 3 in the house</span>
           </figure>
           <div class="plan-body">
@@ -356,7 +358,7 @@
         <div class="coliving-grid">
           <article class="plan room-card">
             <figure class="plan-photo">
-              <img src="assets/img/room-ensuite-staged.jpg" srcset="assets/img/room-ensuite-staged-600.jpg 600w, assets/img/room-ensuite-staged.jpg 960w" sizes="(max-width: 760px) 92vw, 560px" width="960" height="660" loading="lazy" decoding="async" alt="The en-suite bedroom with a double bed, wooden floors, built-in wardrobes, a sunny window and a door to its own bathroom">
+              <picture><source type="image/webp" srcset="assets/img/room-ensuite-staged-600.webp 600w, assets/img/room-ensuite-staged.webp 960w" sizes="(max-width: 760px) 92vw, 560px"><img src="assets/img/room-ensuite-staged.jpg" srcset="assets/img/room-ensuite-staged-600.jpg 600w, assets/img/room-ensuite-staged.jpg 960w" sizes="(max-width: 760px) 92vw, 560px" width="960" height="660" loading="lazy" decoding="async" alt="The en-suite bedroom with a double bed, wooden floors, built-in wardrobes, a sunny window and a door to its own bathroom"></picture>
               <span class="sticker">En-suite</span>
             </figure>
             <div class="plan-body">
@@ -371,7 +373,7 @@
           </article>
           <article class="plan room-card">
             <figure class="plan-photo">
-              <img src="assets/img/room-shared-staged.jpg" srcset="assets/img/room-shared-staged-600.jpg 600w, assets/img/room-shared-staged.jpg 960w" sizes="(max-width: 760px) 92vw, 560px" width="960" height="660" loading="lazy" decoding="async" alt="A bedroom with a shared bathroom: a double bed, wooden floors and big bright windows">
+              <picture><source type="image/webp" srcset="assets/img/room-shared-staged-600.webp 600w, assets/img/room-shared-staged.webp 960w" sizes="(max-width: 760px) 92vw, 560px"><img src="assets/img/room-shared-staged.jpg" srcset="assets/img/room-shared-staged-600.jpg 600w, assets/img/room-shared-staged.jpg 960w" sizes="(max-width: 760px) 92vw, 560px" width="960" height="660" loading="lazy" decoding="async" alt="A bedroom with a shared bathroom: a double bed, wooden floors and big bright windows"></picture>
               <span class="sticker">2 rooms</span>
             </figure>
             <div class="plan-body">
@@ -411,7 +413,7 @@
 
         <div class="bento">
           <figure class="tile tile-photo t-lounge">
-            <img src="assets/img/lounge-fireplace-1280.jpg" srcset="assets/img/lounge-fireplace-800.jpg 800w, assets/img/lounge-fireplace-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of the coworking lounge at Howzit? in Sea Point, Cape Town: people working at a long wooden table and relaxing in armchairs in a bright lounge with a fireplace, bay windows and a chandelier">
+            <picture><source type="image/webp" srcset="assets/img/lounge-fireplace-800.webp 800w, assets/img/lounge-fireplace-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 600px"><img src="assets/img/lounge-fireplace-1280.jpg" srcset="assets/img/lounge-fireplace-800.jpg 800w, assets/img/lounge-fireplace-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation of the coworking lounge at Howzit? in Sea Point, Cape Town: people working at a long wooden table and relaxing in armchairs in a bright lounge with a fireplace, bay windows and a chandelier"></picture>
             <figcaption><span>The Lounge</span> fireplace, big windows &amp; a shared table</figcaption>
           </figure>
           <div class="tile tile-note t-note">
@@ -419,11 +421,11 @@
             <p>Bare feet optional. Good wifi mandatory.</p>
           </div>
           <figure class="tile tile-photo t-garden">
-            <img src="assets/img/house-front-arrivals-1280.jpg" srcset="assets/img/house-front-arrivals-800.jpg 800w, assets/img/house-front-arrivals-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: three friends arriving at the front gate of a single-storey Sea Point house with a palm tree, one wheeling a bicycle and two holding coffees">
+            <picture><source type="image/webp" srcset="assets/img/house-front-arrivals-800.webp 800w, assets/img/house-front-arrivals-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 300px"><img src="assets/img/house-front-arrivals-1280.jpg" srcset="assets/img/house-front-arrivals-800.jpg 800w, assets/img/house-front-arrivals-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: three friends arriving at the front gate of a single-storey Sea Point house with a palm tree, one wheeling a bicycle and two holding coffees"></picture>
             <figcaption><span>The House</span> single-storey, sunny &amp; 5 min from the Prom</figcaption>
           </figure>
           <figure class="tile tile-photo t-coffee">
-            <img src="assets/img/kitchen-coffee-1280.jpg" srcset="assets/img/kitchen-coffee-800.jpg 800w, assets/img/kitchen-coffee-1280.jpg 1280w" sizes="(max-width: 760px) 46vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: three people chatting over coffee at the kitchen counter beside wooden cupboards and a window">
+            <picture><source type="image/webp" srcset="assets/img/kitchen-coffee-800.webp 800w, assets/img/kitchen-coffee-1280.webp 1280w" sizes="(max-width: 760px) 46vw, 300px"><img src="assets/img/kitchen-coffee-1280.jpg" srcset="assets/img/kitchen-coffee-800.jpg 800w, assets/img/kitchen-coffee-1280.jpg 1280w" sizes="(max-width: 760px) 46vw, 300px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: three people chatting over coffee at the kitchen counter beside wooden cupboards and a window"></picture>
             <figcaption><span>The Kitchen</span> coffee, rooibos &amp; long-table lunches</figcaption>
           </figure>
         </div>
@@ -442,14 +444,14 @@
           <div class="more-body">
             <p class="peek-intro">A look around the house: the pool, the gardens, the kitchen and the rooms.</p>
             <ul class="peek-strip">
-              <li><div class="peek-item"><img src="assets/img/real-pool-braai-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The real pool and the built-in brick braai in the back garden, shaded by trees"><span>The pool &amp; built-in braai</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-pool-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The kidney-shaped pool with brick paving, a raised garden bed and trees"><span>The pool</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-front-garden-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The front garden with palms, shrubs and a paved path behind the front fence"><span>Front garden</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-exterior-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The single-storey house from the garden, with a big palm tree beside it"><span>The house</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-fireplace-room-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The room with a fireplace, wooden floors and a big window"><span>Room with fireplace</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-french-doors-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The room with French doors to the garden and wooden floors"><span>French doors to the garden</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/room-shared-2-staged-600.jpg" width="600" height="413" loading="lazy" decoding="async" alt="A bedroom with a double bed, built-in wardrobes and wooden floors"><span>A bedroom</span></div></li>
-              <li><div class="peek-item"><img src="assets/img/real-kitchen-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The kitchen with wooden cupboards and a tiled floor"><span>Kitchen</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-pool-braai-600.webp"><img src="assets/img/real-pool-braai-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The real pool and the built-in brick braai in the back garden, shaded by trees"></picture><span>The pool &amp; built-in braai</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-pool-600.webp"><img src="assets/img/real-pool-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The kidney-shaped pool with brick paving, a raised garden bed and trees"></picture><span>The pool</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-front-garden-600.webp"><img src="assets/img/real-front-garden-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The front garden with palms, shrubs and a paved path behind the front fence"></picture><span>Front garden</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-exterior-600.webp"><img src="assets/img/real-exterior-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The single-storey house from the garden, with a big palm tree beside it"></picture><span>The house</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-fireplace-room-600.webp"><img src="assets/img/real-fireplace-room-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The room with a fireplace, wooden floors and a big window"></picture><span>Room with fireplace</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-french-doors-600.webp"><img src="assets/img/real-french-doors-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The room with French doors to the garden and wooden floors"></picture><span>French doors to the garden</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/room-shared-2-staged-600.webp"><img src="assets/img/room-shared-2-staged-600.jpg" width="600" height="413" loading="lazy" decoding="async" alt="A bedroom with a double bed, built-in wardrobes and wooden floors"></picture><span>A bedroom</span></div></li>
+              <li><div class="peek-item"><picture><source type="image/webp" srcset="assets/img/real-kitchen-600.webp"><img src="assets/img/real-kitchen-600.jpg" width="600" height="450" loading="lazy" decoding="async" alt="The kitchen with wooden cupboards and a tiled floor"></picture><span>Kitchen</span></div></li>
             </ul>
           </div>
         </details>
@@ -492,8 +494,8 @@
         </div>
 
         <div class="social-bento">
-          <figure class="s-tile s-pool"><img src="assets/img/pool-braai-sunset-1280.jpg" srcset="assets/img/pool-braai-sunset-800.jpg 800w, assets/img/pool-braai-sunset-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: friends gathered around a braai at sunset beside the pool, with string lights in the trees and a wooden table set for dinner"><figcaption><svg aria-hidden="true"><use href="#i-flame"/></svg>Braai &amp; sundowners by the pool</figcaption></figure>
-          <figure class="s-tile s-braai"><img src="assets/img/garden-yoga-1280.jpg" srcset="assets/img/garden-yoga-800.jpg 800w, assets/img/garden-yoga-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: two people doing yoga on mats on the paved garden under palm trees while another relaxes on a bench"><figcaption><svg aria-hidden="true"><use href="#i-leaf"/></svg>Garden yoga</figcaption></figure>
+          <figure class="s-tile s-pool"><picture><source type="image/webp" srcset="assets/img/pool-braai-sunset-800.webp 800w, assets/img/pool-braai-sunset-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 600px"><img src="assets/img/pool-braai-sunset-1280.jpg" srcset="assets/img/pool-braai-sunset-800.jpg 800w, assets/img/pool-braai-sunset-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: friends gathered around a braai at sunset beside the pool, with string lights in the trees and a wooden table set for dinner"></picture><figcaption><svg aria-hidden="true"><use href="#i-flame"/></svg>Braai &amp; sundowners by the pool</figcaption></figure>
+          <figure class="s-tile s-braai"><picture><source type="image/webp" srcset="assets/img/garden-yoga-800.webp 800w, assets/img/garden-yoga-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 600px"><img src="assets/img/garden-yoga-1280.jpg" srcset="assets/img/garden-yoga-800.jpg 800w, assets/img/garden-yoga-1280.jpg 1280w" sizes="(max-width: 760px) 92vw, 600px" width="1280" height="720" loading="lazy" decoding="async" alt="AI-styled visualisation: two people doing yoga on mats on the paved garden under palm trees while another relaxes on a bench"></picture><figcaption><svg aria-hidden="true"><use href="#i-leaf"/></svg>Garden yoga</figcaption></figure>
           <div class="s-tile s-card s-yoga s-prom">
             <svg class="prom-illo" viewBox="0 0 220 150" aria-hidden="true">
               <circle cx="110" cy="92" r="46" fill="#F2B84B"/>

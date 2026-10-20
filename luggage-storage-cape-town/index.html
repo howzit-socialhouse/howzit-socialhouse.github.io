@@ -27,9 +27,11 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..700,100;1,9..144,400..600,100&display=swap" rel="stylesheet">
+  <!-- Caveat is only used for a few short hand-written notes, so it loads as a small subset. Add any new letters to text= -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap&text=%20%21%2C-.%3F%27%26abcdefghijklmnopqrstuvwxyz0123456789ELOPS" rel="stylesheet">
 
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.min.css">
   <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -420,7 +422,7 @@
   <a class="btn btn-outline btn-lg wa-link" href="https://wa.me/34689263293?text=Hi%20Howzit!%20I%27d%20like%20to%20book%20a%20luggage%20drop" target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg> Chat on WhatsApp</a>
 </div>
           </div>
-          <figure class="lp-photo"><img src="/assets/img/real-exterior.jpg" width="900" height="675" fetchpriority="high" decoding="async" alt="The single-storey house from the garden, with a big palm tree beside it"></figure>
+          <figure class="lp-photo"><picture><source type="image/webp" srcset="/assets/img/real-exterior.webp"><img src="/assets/img/real-exterior.jpg" width="900" height="675" fetchpriority="high" decoding="async" alt="The single-storey house from the garden, with a big palm tree beside it"></picture></figure>
         </div>
       </div>
     </section>

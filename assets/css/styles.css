@@ -41,6 +41,7 @@ body {
   background: var(--cream); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; overflow-x: clip;
 }
 img { max-width: 100%; height: auto; display: block; }
+picture { display: contents; } /* WebP wrapper: lets the <img> inside keep its existing layout */
 a { color: var(--terracotta-d); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
 a:hover { color: var(--ocean); }
 h1, h2, h3, h4 { font-family: var(--font-display); font-variation-settings: "SOFT" 100; line-height: 1.08; margin: 0 0 .5em; letter-spacing: -.015em; font-weight: 550; color: var(--ink); }
