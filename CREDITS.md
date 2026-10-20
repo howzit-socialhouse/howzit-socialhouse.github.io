@@ -17,6 +17,19 @@ These are unstaged photos of the house in Sea Point. They have been cropped (to 
 | `real-french-doors.jpg` (+ `-600`) | Room with French doors to the garden | Gallery |
 | `real-long-room.jpg` (+ `-600`) | Long room | Gallery |
 | `real-kitchen.jpg` (+ `-600`) | Kitchen | Gallery |
+| `room-ensuite-real.jpg` (+ `-600`) | The en-suite bedroom, empty (built-in wardrobes, door to its bathroom) | Kept as the unstaged source; not currently shown |
+| `room-shared-real.jpg` (+ `-600`) | A bedroom with a shared bathroom, empty (big front windows) | Kept as the unstaged source; not currently shown |
+| `room-shared-2-real.jpg` (+ `-600`) | A second shared-bathroom bedroom, empty (built-in wardrobes) | Kept as the unstaged source; not currently shown |
+
+## Virtually staged bedroom photos
+
+These are virtually staged versions of the real Property24 listing photos of the bedrooms above: minimal furniture (bed, bedside table, lamp, rug, plants) was added digitally. The room itself (walls, floors, windows, wardrobes, doors) is unchanged. Cropped to 16:11.
+
+| File | Staged from | Used in |
+|---|---|---|
+| `room-ensuite-staged.jpg` (+ `-600`) | `room-ensuite-real.jpg` | Co-living card (en-suite), co-living page |
+| `room-shared-staged.jpg` (+ `-600`) | `room-shared-real.jpg` | Co-living card (shared bathroom) |
+| `room-shared-2-staged.jpg` (+ `-600`) | `room-shared-2-real.jpg` | "Take a peek inside the house" gallery |
 
 For privacy, the site only ever says "Sea Point, Cape Town": no street address, house number, postal code, coordinates or listing links.
 

@@ -829,3 +829,160 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .offer-callout { margin: 22px 0; padding: 18px 20px; border-left: 5px solid var(--terracotta); background: var(--cream); border-radius: var(--r-sm); }
 .offer-callout h3 { margin: 0 0 6px; font-family: var(--font-display); }
 .offer-callout p { margin: 0; }
+
+/* ==========================================================================
+   2026-10 redesign: calmer, shorter page (details toggles, tabs, price match,
+   co-living availability calendar)
+   ========================================================================== */
+:root { --section-y: clamp(60px, 8vw, 112px); }
+.section-tight { padding: clamp(48px, 6vw, 80px) 0; }
+.section-head { margin-bottom: clamp(28px, 4vw, 48px); }
+.h-small { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.btn-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-row .btn { flex: 1 1 200px; }
+
+/* Click-to-open "Details" toggles */
+.more { margin: 4px 0 22px; }
+.more > summary { list-style: none; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-weight: 700; font-size: .95rem; color: var(--terracotta-d); padding: 8px 4px; border-radius: 999px; min-height: 44px; }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary::after { content: ""; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--sand) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A64C28' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 6v12M6 12h12'/%3E%3C/svg%3E") center / 13px no-repeat; transition: transform .3s var(--ease), background-color .2s ease; }
+.more[open] > summary::after { transform: rotate(135deg); background-color: var(--sun); }
+.more > summary:hover { color: var(--ocean); }
+.more-body { padding: 10px 0 4px; color: var(--ink-soft); font-size: .96rem; animation: more-in .35s var(--ease); }
+.more-body p:last-child { margin-bottom: 0; }
+.more-body .checks { margin-bottom: 16px; color: var(--ink); }
+@keyframes more-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.more-center { text-align: center; margin: 22px auto 0; max-width: 760px; }
+.more-center .more-body { text-align: left; }
+.section-sand .more > summary::after, .section-sage .more > summary::after { background-color: var(--cream); }
+.more-light > summary { color: var(--sun); }
+.more-light > summary:hover { color: #fff; }
+.more-light > summary::after { background-color: rgba(255,255,255,.14); filter: brightness(1.8) saturate(.5); }
+.more-light { text-align: center; margin-top: 20px; }
+.more-light .more-body.calendar { text-align: left; margin-top: 14px; }
+.more-form { margin: -4px 0 12px; }
+.more-form > summary { font-size: .9rem; }
+.more-form .opt { font-weight: 400; color: var(--ink-soft); }
+.mini-steps { list-style: decimal; padding-left: 1.3em; display: grid; gap: 6px; margin: 0 0 12px; color: var(--ink); }
+.peek-toggle > summary { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; }
+.peek-toggle { max-width: none; }
+.peek-intro { text-align: center; margin-bottom: 16px; }
+
+/* Hot desk card: photo beside prices on wide screens */
+.desk-card, .office-card { padding: 0; overflow: hidden; display: grid; grid-template-columns: .85fr 1.15fr; }
+.desk-card .plan-photo, .office-card .plan-photo { aspect-ratio: auto; min-height: 100%; }
+.desk-card .price-options { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.desk-card .price-opt.opt-yearly { grid-column: auto; }
+.desk-card .btn-primary:last-child { align-self: flex-start; }
+.office-card { grid-template-columns: 1.15fr .85fr; }
+.office-card .plan-photo { order: 2; }
+.office-card .office-list { flex: none; margin-bottom: 8px; }
+
+/* Price match offer */
+.price-match { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 18px 36px; margin-top: 26px; padding: clamp(22px, 3vw, 34px) clamp(22px, 3.5vw, 40px); border-radius: var(--r-lg); background: var(--cream); border: 2px dashed var(--terracotta); }
+.price-match .eyebrow { margin-bottom: 8px; }
+.price-match h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-bottom: 8px; }
+.price-match h3 em { font-style: italic; font-weight: 450; color: var(--terracotta); }
+.price-match p:last-child { margin: 0; color: var(--ink-soft); max-width: 52ch; }
+.pm-actions { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.pm-wa { font-size: .9rem; font-weight: 600; color: var(--ink-soft); }
+.pm-note { position: absolute; top: -18px; right: 28px; background: var(--sun); color: var(--ink); padding: 6px 14px 4px; border-radius: 999px; transform: rotate(4deg); font-size: 1.35rem; box-shadow: var(--shadow); }
+
+/* Co-living */
+.section-sage .room-card { background: var(--cream); }
+.room-count { font-family: var(--font-body); font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--olive); background: var(--sage-l); padding: 3px 9px; border-radius: 999px; vertical-align: middle; margin-left: 6px; white-space: nowrap; }
+.room-card .plan-photo img { object-position: 50% 60%; }
+.coliving-incl li { font-weight: 600; }
+.coliving-incl .icon { color: var(--olive); stroke-width: 2.8; }
+
+/* Social */
+.breakfast-line { display: flex; align-items: center; justify-content: center; gap: 10px; margin: 28px auto 0; text-align: left; color: rgba(255,255,255,.9); max-width: 46em; }
+.breakfast-line .icon { width: 26px; height: 26px; color: var(--sun); flex: none; }
+.section-ocean .more-body.calendar { color: var(--ink); }
+.social-bento .s-learn { grid-column: 1 / -1; }
+
+/* Tabs */
+.tabs { max-width: 920px; margin: 0 auto; }
+.tab-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
+.tab-list [role="tab"] { font: 700 .95rem/1 var(--font-body); color: var(--ink); background: var(--cream); border: 1.5px solid var(--sand-2); border-radius: 999px; padding: 12px 18px; min-height: 44px; cursor: pointer; transition: background-color .2s ease, color .2s ease, border-color .2s ease; }
+.section:not(.section-sand) .tab-list [role="tab"] { background: var(--sand); border-color: transparent; }
+.tab-list [role="tab"]:hover { border-color: var(--terracotta); }
+.tab-list [role="tab"][aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+.tab-panel { animation: more-in .35s var(--ease); }
+.tab-panel[hidden] { display: none; }
+.tabs .tab-panel.plan { background: var(--sand); }
+.tabs .tab-panel.fit-card { background: var(--cream); padding: clamp(22px, 3vw, 32px); gap: 10px; }
+.tabs .fit-offer { background: var(--sand); }
+.tab-panel .hire-rates li, .tab-panel .ld-row:not(.ld-th) { background: var(--cream); }
+.tab-panel .storage-prices { margin: 0 0 14px; max-width: none; }
+.tab-panel .ld-table { margin-bottom: 14px; }
+.tab-panel .plan-head h3 { font-size: 1.45rem; }
+
+/* ---------- Availability dialog ---------- */
+.avail { border: 0; padding: 0; width: min(760px, 96vw); max-height: 94vh; border-radius: var(--r-lg); background: var(--cream); color: var(--ink); box-shadow: var(--shadow-lg); overflow: auto; overscroll-behavior: contain; }
+.avail::backdrop { background: rgba(22,30,32,.6); backdrop-filter: blur(3px); }
+.avail-form { padding: clamp(20px, 3.5vw, 36px); }
+.avail-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 10px; }
+.avail-head h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); margin: 0; }
+.avail-head .eyebrow { margin-bottom: 8px; }
+.avail-close { position: static; flex: none; background: var(--sand); box-shadow: none; }
+.avail-dates { display: grid; grid-template-columns: 1fr 1fr; border: 1.5px solid var(--sand-2); border-radius: 16px; overflow: hidden; margin-bottom: 14px; background: #fff; }
+.date-box { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 10px 16px; border: 0; background: transparent; text-align: left; cursor: pointer; font: 600 1rem/1.3 var(--font-body); color: var(--ink); min-height: 58px; }
+.date-box + .date-box { border-left: 1.5px solid var(--sand-2); }
+.date-box small { font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+.date-box.is-active { box-shadow: inset 0 0 0 2px var(--ink); border-radius: 14px; }
+.cal { position: relative; }
+.cal-nav { position: absolute; left: 0; right: 0; top: 2px; display: flex; justify-content: space-between; pointer-events: none; }
+.cal-nav button { pointer-events: auto; display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--sand-2); background: #fff; cursor: pointer; color: var(--ink); }
+.cal-nav button:disabled { opacity: .3; cursor: default; }
+.cal-months { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+.cal-month h3 { text-align: center; font-size: 1.1rem; margin: 10px 0 12px; line-height: 1.3; }
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); row-gap: 2px; }
+.cal-dow { text-align: center; font-size: .72rem; font-weight: 700; color: var(--ink-soft); padding-bottom: 6px; }
+.cal-day-btn { position: relative; aspect-ratio: 1; border: 0; background: transparent; font: 600 .92rem/1 var(--font-body); color: var(--ink); cursor: pointer; border-radius: 50%; min-height: 38px; }
+.cal-day-btn:hover:not(:disabled) { box-shadow: inset 0 0 0 1.5px var(--ink); }
+.cal-day-btn:disabled { color: rgba(43,33,28,.28); text-decoration: line-through; cursor: not-allowed; }
+.cal-day-btn.in-range { background: var(--sand); border-radius: 0; }
+.cal-day-btn.is-start, .cal-day-btn.is-end { background: var(--terracotta); color: #fff; border-radius: 50%; }
+.cal-day-btn.is-start.has-range { border-radius: 50% 0 0 50%; }
+.cal-day-btn.is-end { border-radius: 0 50% 50% 0; }
+.cal-day-btn.is-start.is-end { border-radius: 50%; }
+.cal-help { font-size: .84rem; color: var(--ink-soft); margin: 10px 0 0; display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.cal-clear { border: 0; background: none; font: 700 .84rem var(--font-body); color: var(--ink); text-decoration: underline; cursor: pointer; padding: 0; }
+.avail-sum { margin: 14px 0 16px; padding: 12px 16px; border-radius: 14px; background: var(--sand); font-size: .95rem; }
+.avail-sum strong { font-family: var(--font-display); font-weight: 600; }
+.avail .field input, .avail .field textarea, .avail .field select { background: #fff; }
+.avail .field textarea { min-height: 84px; }
+
+@media (max-width: 1040px) {
+  .desk-card, .office-card { grid-template-columns: 1fr; }
+  .desk-card .plan-photo, .office-card .plan-photo { aspect-ratio: 16 / 8; min-height: 0; order: 0; }
+}
+@media (max-width: 760px) {
+  .price-match { grid-template-columns: 1fr; padding-top: 30px; }
+  .pm-actions { align-items: stretch; }
+  .pm-actions .btn { width: 100%; }
+  .pm-note { right: 16px; font-size: 1.2rem; }
+  .desk-card .price-options { grid-template-columns: 1fr; gap: 10px; }
+  .desk-card .plan-photo, .office-card .plan-photo { aspect-ratio: 16 / 9; }
+  .desk-card .btn-primary:last-child { width: 100%; }
+  .tab-list { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; margin-right: calc(var(--gutter) * -1); padding: 2px var(--gutter) 4px 2px; }
+  .tab-list::-webkit-scrollbar { display: none; }
+  .tab-list [role="tab"] { flex: none; padding: 11px 15px; font-size: .9rem; }
+  .tab-panel .btn { width: 100%; }
+  .breakfast-line { align-items: flex-start; }
+  .t-garden { display: none; }
+  .essentials { gap: 18px 14px; }
+  .essentials strong { font-size: 1.05rem; margin-top: 6px; }
+  .ess-icon { width: 44px; height: 44px; }
+  .social-bento { grid-auto-rows: 150px; }
+  .avail { width: 100vw; max-width: 100vw; height: 100%; max-height: 100%; border-radius: 0; margin: 0; }
+  .cal-months { grid-template-columns: 1fr; }
+  .cal-day-btn { min-height: 42px; }
+  .map-card { aspect-ratio: 4 / 3; }
+}
+.site-nav ul a { white-space: nowrap; }
+@media (max-width: 1320px) and (min-width: 1041px) { .nav-daypass { display: none !important; } .site-nav ul a { padding: 8px 10px; } }
+.cal-day-btn { font-variant-numeric: tabular-nums; }
+.tab-list [role="tab"][aria-selected="true"], .section:not(.section-sand) .tab-list [role="tab"][aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--cream); }
+@media (max-width: 760px) and (min-width: 350px) { .room-rates { grid-template-columns: 1fr 1fr; } .room-rates b { font-size: 1.15rem; } }

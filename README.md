@@ -27,7 +27,10 @@ howzit-socialhouse.github.io/
 └── .nojekyll               # tells GitHub Pages to serve files as-is (no Jekyll processing)
 ```
 
-### Page sections (in order)
+### Page sections (in order, 2026-10 redesign)
+Order follows business priority: Hero → Hot desks (+ price-match offer) → Private offices → Co-living (with a "Check availability" date-range dialog, window 1 Dec 2026 – 1 Jun 2027, sent via Web3Forms) → The House → Find your fit (tabs) → Social House → Extras (tabs: meeting space, nomad storage, luggage drop, dogs) → Location → FAQ → Contact. Fine print sits in `<details class="more">` toggles.
+
+### Previous page sections (before the redesign)
 1. **Top bar + sticky header**: logo, nav, "Day pass" and "Book a visit" buttons (hamburger menu on tablet/mobile).
 2. **Hero**: "Work from a house, not an office." with the pool scene in an arch, a round inset of the real pool, a handwritten "5 min to the Prom!" note, location pills and two calls to action.
 3. **Marquee**: hot desks · private offices · pool · garden · braai · yoga · board games · workshops · nomad storage.
