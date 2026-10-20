@@ -989,7 +989,6 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .tab-list [role="tab"][aria-selected="true"], .section:not(.section-sand) .tab-list [role="tab"][aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--cream); }
 @media (max-width: 760px) and (min-width: 350px) { .room-rates { grid-template-columns: 1fr 1fr; } .room-rates b { font-size: 1.15rem; } }
 
-/* Link from the home offices card to the private offices page */
-.office-more { margin: 14px 0 0; font-weight: 700; }
-.office-more a { color: var(--terracotta-d); }
+/* Home: short private-offices teaser (full details live on /private-offices-sea-point/) */
+.office-teaser { font-size: 1.1rem; margin: 0 0 24px; flex: 1; }
 .section-sand .office-row { background: var(--cream); }
