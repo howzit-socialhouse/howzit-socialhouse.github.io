@@ -830,6 +830,8 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .lp-links a { display: block; padding: 16px 18px; background: var(--cream); border-radius: var(--r-sm); font-weight: 600; color: var(--ink); text-decoration: none; box-shadow: var(--shadow); }
 .lp-links a:hover { color: var(--terracotta-d); }
 .lp-links small { display: block; font-weight: 400; color: var(--ink-soft); }
+.lp-links.lp-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.lp-links.lp-row a { padding: 8px 14px; border-radius: 999px; font-size: .92rem; box-shadow: none; border: 1px solid var(--line, rgba(43,33,28,.15)); }
 @media (max-width: 860px) { .lp-hero-grid { grid-template-columns: 1fr; } }
 .lp-section, #hot-desks, #private-offices, #dog-friendly, #nomad-storage { scroll-margin-top: 110px; }
 /* Find your fit */

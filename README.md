@@ -53,7 +53,7 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 - **Analytics:** Google Analytics 4 (gtag.js, ID `G-4FQ6NP60Y5`) sits right after `<meta charset>` in every page's `<head>`, including `404.html` and the redirect stubs. Add it to any new page.
 - **IndexNow:** the key file is `/0bf6087b5eee82a9052f1d63cad50300.txt` at the site root. Keep it; after publishing changes, POST the changed URLs to https://api.indexnow.org/indexnow.
 - **Open Graph images:** each main page has its own 1200×630 `assets/img/og-*.jpg`; the home page keeps `og-image.jpg`.
-- **Pages:** `/private-offices-sea-point/` (new, Oct 2026), `/hot-desk-day-pass-sea-point/` and `/dog-friendly-coworking-cape-town/` (real landing pages again since 21 Oct 2026), `/therapy-room-sea-point/` (new, 21 Oct 2026) and a branded `404.html`. Redirect stubs (noindex): `/private-office-sea-point/`, `/nomad-storage-cape-town/`. Keep `sitemap.xml` in sync when adding pages.
+- **Pages:** `/private-offices-sea-point/` (new, Oct 2026), `/hot-desk-day-pass-sea-point/` and `/dog-friendly-coworking-cape-town/` (real landing pages again since 21 Oct 2026) and a branded `404.html`. Redirect stubs (noindex): `/private-office-sea-point/`, `/nomad-storage-cape-town/`, `/therapy-room-sea-point/` (→ offices, since 21 Oct 2026; no separate therapy page). Keep `sitemap.xml` in sync when adding pages.
 
 ## Editing the site
 
