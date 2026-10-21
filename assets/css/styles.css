@@ -1,3 +1,13 @@
+/* Self-hosted fonts (Oct 2026): DM Sans, Fraunces (variable, incl. SOFT axis) and a small Caveat subset. Files in /assets/fonts. */
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url(../fonts/dm-sans-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'DM Sans'; font-style: normal; font-weight: 100 1000; font-display: swap; src: url(../fonts/dm-sans-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/fraunces-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 400 700; font-display: swap; src: url(../fonts/fraunces-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 400 600; font-display: swap; src: url(../fonts/fraunces-italic-latin-ext.woff2) format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Fraunces'; font-style: italic; font-weight: 400 600; font-display: swap; src: url(../fonts/fraunces-italic-latin.woff2) format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* Caveat subset covers: space ! & ' , - . 0-9 ? E L O P S a-z. Add a new subset if a hand-note needs other characters. */
+@font-face { font-family: 'Caveat'; font-style: normal; font-weight: 600; font-display: swap; src: url(../fonts/caveat-600-subset.woff2) format('woff2'); unicode-range: U+20-21, U+26-27, U+2C-2E, U+30-39, U+3F, U+45, U+4C, U+4F-50, U+53, U+61-7A; }
+
 /* ==========================================================================
    Howzit? Co-working space & Social House
    Cosy boutique-house look: cream & sand, terracotta, sage, ocean-blue accent
@@ -810,6 +820,9 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .lp-table { width: 100%; border-collapse: collapse; margin: 18px 0; background: var(--cream); border-radius: var(--r-sm); overflow: hidden; }
 .lp-table th, .lp-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
 .lp-table th { background: var(--sand); font-weight: 700; }
+.lp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.lp-table-wrap .lp-table { min-width: 520px; }
+.lp-table th small { font-weight: 500; }
 .lp-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 28px 0; }
 .lp-faq details { background: var(--cream); border-radius: var(--r-sm); padding: 14px 18px; margin-bottom: 10px; }
 .lp-faq summary { font-weight: 700; cursor: pointer; }
