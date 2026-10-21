@@ -5,7 +5,7 @@ Plain HTML, CSS and a little vanilla JavaScript. There's **no build step**, so i
 
 > Live site: **https://howzitseapoint.co.za/**. Prices shown are launch prices (ZAR, incl. VAT where applicable) and may change.
 
-> **Privacy:** the site deliberately shows the location only as **Sea Point, Cape Town**. Do not add a street address, house number, postal code, GPS coordinates, map pin, phone number, email address or property-listing links/IDs anywhere (HTML, JSON-LD, meta tags, alt text, file names, README/CREDITS). Exact directions are shared privately when someone books a visit.
+> **Privacy:** the site deliberately shows the location only as **Sea Point, Cape Town**. Do not add a street address, house number, postal code, GPS coordinates, map pin, phone number or property-listing links/IDs anywhere. The only public email is the contact address info@howzitseapoint.co.za (in the JSON-LD `email` and a few page texts); add no others (HTML, JSON-LD, meta tags, alt text, file names, README/CREDITS). Exact directions are shared privately when someone books a visit.
 
 ## Structure
 
@@ -49,8 +49,11 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 ## Performance notes (Oct 2026)
 - **CSS:** edit `assets/css/styles.css`, then regenerate the file the pages load: `npx csso-cli --no-restructure assets/css/styles.css -o assets/css/styles.min.css`.
 - **Images:** every JPEG has a WebP twin (`*.webp`, quality 75) served via `<picture>`; the JPEG stays as the fallback. When you swap a photo, regenerate its `.webp` too (e.g. Pillow `Image.save(..., "WEBP", quality=75, method=6)`). `og-image.jpg` stays JPEG for social previews.
-- **Fonts:** Caveat (hand-written notes) loads as a small subset via `&text=` in each page's `<head>`. If you add a hand-note with new capital letters or symbols, add them to that `text=` list.
-- **Pages:** `/private-offices-sea-point/` (new, Oct 2026) and a branded `404.html`. Keep `sitemap.xml` in sync when adding pages.
+- **Fonts (self-hosted since 21 Oct 2026):** DM Sans, Fraunces (variable, incl. the SOFT axis) and a Caveat subset are WOFF2 files in `assets/fonts/`, declared with `@font-face` (`font-display: swap`) at the top of `styles.css`; each page preloads `dm-sans-latin.woff2` and `fraunces-latin.woff2`. No requests go to Google Fonts. The Caveat subset only covers space ! & ' , - . 0-9 ? E L O P S a-z; if a hand-note needs other characters, download a new subset and replace `caveat-600-subset.woff2`.
+- **Analytics:** Google Analytics 4 (gtag.js, ID `G-4FQ6NP60Y5`) sits right after `<meta charset>` in every page's `<head>`, including `404.html` and the redirect stubs. Add it to any new page.
+- **IndexNow:** the key file is `/0bf6087b5eee82a9052f1d63cad50300.txt` at the site root. Keep it; after publishing changes, POST the changed URLs to https://api.indexnow.org/indexnow.
+- **Open Graph images:** each main page has its own 1200×630 `assets/img/og-*.jpg`; the home page keeps `og-image.jpg`.
+- **Pages:** `/private-offices-sea-point/` (new, Oct 2026), `/hot-desk-day-pass-sea-point/` and `/dog-friendly-coworking-cape-town/` (real landing pages again since 21 Oct 2026), `/therapy-room-sea-point/` (new, 21 Oct 2026) and a branded `404.html`. Redirect stubs (noindex): `/private-office-sea-point/`, `/nomad-storage-cape-town/`. Keep `sitemap.xml` in sync when adding pages.
 
 ## Editing the site
 
@@ -65,7 +68,7 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 | Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = OpenStreetMap embed of the whole Sea Point area, no marker. |
 | **Formspree endpoint** | `index.html`, `action` of `#booking-form` | `FORMSPREE_ENDPOINT_PLACEHOLDER` → replace with `https://formspree.io/f/<form-id>` |
 | Photos | `assets/img/*.jpg` | Real photos of the house (`real-*.jpg`) plus AI-styled visualisations (`*-800.jpg` / `*-1280.jpg`). Update the `alt` text and `CREDITS.md` when you swap them. |
-| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-18` |
+| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-21` (12 URLs) |
 
 ### Map (privacy)
 The `#location` map is an OpenStreetMap embed of the Sea Point area (bounding box only, **no marker**) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
