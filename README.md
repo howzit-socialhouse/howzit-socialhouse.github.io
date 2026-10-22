@@ -38,7 +38,7 @@ Order follows business priority: Hero → Hot desks (+ price-match offer) → Pr
 5. **Work** (`#work`): a **Summer (Nov–Apr) / Winter (May–Oct) price toggle**, hot desk (day / weekly / 10-day pack / monthly + summer season pass or winter rate), the 3 private offices (+ day office), and meeting & workshop space hire (hour / half day / full day / evening). Prices are launch prices, incl. VAT where applicable.
 6. **Nomad storage** (`#storage`): seasonal luggage and belongings storage for the Cape Town winter, with prices (per bag/box per month, winter season bundle, member discount), 4 "how it works" steps, what's included and what to know.
 7. **Social House** (`#social`): bento (braai by the pool, garden yoga, sundowners on the Prom, board games, work by the pool, courses & workshops) and a calendar-style list of **planned** programme ideas, clearly labelled as ideas rather than a fixed schedule.
-8. **Location** (`#location`): Sea Point copy, walking times, a neighbourhood-only location card ("Sea Point, Cape Town"; directions shared on booking) and an OpenStreetMap embed of the Sea Point area with **no marker**.
+8. **Location** (`#location`): Sea Point copy, walking times, a neighbourhood-only location card ("Sea Point, Cape Town"; directions shared on booking) and a static OpenStreetMap image of the Sea Point area with **no marker** (`assets/img/sea-point-map-*`).
 9. **FAQ** (`#faq`): accessible `<details>` accordion.
 10. **Contact / booking** (`#contact`): reply-time note ("We reply within 24 hours"), "Sea Point, Cape Town", a dog-friendly note and a Formspree enquiry form (name, email, optional WhatsApp/phone, interest chips: hot desk / private office / storage / events / other, message).
 11. **Footer**: links, contact info and the note "Some lifestyle images are AI-styled visualisations of the house."
@@ -65,13 +65,13 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 | Changing a seasonal price | `index.html` | Each seasonal price is `<span class="s-sum">…</span><span class="s-win">…</span>`; edit both. Without JS both prices are shown. |
 | Office sizes | `#work` | Office 1 & 2 "for teams of up to 6" / Office 3 "up to 8" (smaller teams of 2–4 welcome) |
 | Social House programme | `#social` calendar | Planned ideas, labelled "not a fixed schedule". Replace with real dates once events are running. |
-| Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = OpenStreetMap embed of the whole Sea Point area, no marker. |
+| Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = static OpenStreetMap image of the whole Sea Point area, no marker. |
 | **Formspree endpoint** | `index.html`, `action` of `#booking-form` | `FORMSPREE_ENDPOINT_PLACEHOLDER` → replace with `https://formspree.io/f/<form-id>` |
 | Photos | `assets/img/*.jpg` | Real photos of the house (`real-*.jpg`) plus AI-styled visualisations (`*-800.jpg` / `*-1280.jpg`). Update the `alt` text and `CREDITS.md` when you swap them. |
 | Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-21` (12 URLs) |
 
 ### Map (privacy)
-The `#location` map is an OpenStreetMap embed of the Sea Point area (bounding box only, **no marker**) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
+The `#location` map is a self-hosted static image of OpenStreetMap tiles of the Sea Point area (no marker; the OSM iframe embed was dropped because it now needs WebGL and rendered as an empty box in some browsers) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
 
 ### Enquiry form (Formspree)
 The form posts to the Formspree endpoint in its `action` attribute (`FORMSPREE_ENDPOINT_PLACEHOLDER` until it is set). Fields: `name`, `email`, `phone` (optional), `interest`, `message`, plus hidden `plan`, `prices_viewed` (the season whose prices were on screen) and `_subject` = "New Howzit? website enquiry". `_gotcha` is Formspree's honeypot spam trap (hidden; bots fill it in). `assets/js/main.js` validates name/email/message, submits with `fetch()` (POST, `Accept: application/json`) and shows an inline success or error message, so there's no redirect. Without JavaScript the browser posts the form normally.

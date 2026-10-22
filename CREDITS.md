@@ -53,4 +53,4 @@ These lifestyle scenes were generated to show how the house will feel once membe
 - Logo, favicon, the suitcase, board-game and sundowner illustrations, and the `og-image.jpg` layout: created for this project.
 - Line icons: drawn in the style of Feather / Lucide icons (MIT licence).
 - Fonts: Fraunces, DM Sans and Caveat, loaded from Google Fonts (SIL Open Font License).
-- Map: © OpenStreetMap contributors (ODbL), embedded via openstreetmap.org (Sea Point area, no marker).
+- Map: © OpenStreetMap contributors (ODbL), static image made from openstreetmap.org tiles (Sea Point area, no marker; attribution shown on the image).
