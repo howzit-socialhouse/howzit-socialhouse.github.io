@@ -526,7 +526,7 @@
       </div>
     </section>
 
-    <!-- ============ EXTRAS (tabs) ============ -->
+    <!-- ============ EXTRAS (compact cards; prices & details behind "Prices & details") ============ -->
     <section class="section" id="extras" aria-labelledby="extras-title">
       <div class="container">
         <div class="section-head center">
@@ -534,114 +534,132 @@
           <h2 id="extras-title">Meetings, storage <em>&amp; dogs</em></h2>
           <p class="section-sub">Members and non-members welcome. Members get 20% off space hire and storage.</p>
         </div>
-        <div class="tabs" data-tabs>
-          <div class="tab-list" role="tablist" aria-label="Extras">
-            <button role="tab" id="ex-t1" aria-controls="space-hire" aria-selected="true">Meeting space</button>
-            <button role="tab" id="ex-t2" aria-controls="storage" aria-selected="false" tabindex="-1">Nomad storage</button>
-            <button role="tab" id="ex-t3" aria-controls="luggage-drop" aria-selected="false" tabindex="-1">Luggage drop</button>
-            <button role="tab" id="ex-t4" aria-controls="cobarking" aria-selected="false" tabindex="-1">Dogs 🐾</button>
-          </div>
-
-          <div class="tab-panel plan" role="tabpanel" id="space-hire" aria-labelledby="ex-t1">
+        <div class="extras-grid">
+          <article class="plan extra-card" id="space-hire" aria-labelledby="space-hire-title">
             <div class="plan-head">
               <span class="plan-icon"><svg aria-hidden="true"><use href="#i-book"/></svg></span>
               <div>
-                <h3>Meeting &amp; workshop space</h3>
+                <p class="extra-label">Meeting space</p>
+                <h3 id="space-hire-title">Meeting &amp; workshop space</h3>
                 <p>Hire the lounge or garden for meetings, courses, offsites and workshops.</p>
               </div>
             </div>
-            <ul class="hire-rates">
-              <li><span>Per hour <small>(min. 2 hours)</small></span><b>R450</b></li>
-              <li><span>Half day <small>(4 hours)</small></span><b>R1,450</b></li>
-              <li><span>Full day <small>(8 hours)</small></span><b>R2,650</b></li>
-              <li><span>Evening <small>(6&ndash;9pm)</small></span><b>R1,650</b></li>
-            </ul>
-            <p class="tiny">Same price all year. Members get 20% off. Prices in ZAR, incl. VAT where applicable.</p>
-            <a class="btn btn-primary" href="#contact" data-plan="Meeting / workshop space">Enquire about space hire</a>
-          </div>
+            <details class="extra-more">
+              <summary class="btn btn-outline">Prices &amp; details</summary>
+              <div class="extra-body">
+              <ul class="hire-rates">
+                <li><span>Per hour <small>(min. 2 hours)</small></span><b>R450</b></li>
+                <li><span>Half day <small>(4 hours)</small></span><b>R1,450</b></li>
+                <li><span>Full day <small>(8 hours)</small></span><b>R2,650</b></li>
+                <li><span>Evening <small>(6&ndash;9pm)</small></span><b>R1,650</b></li>
+              </ul>
+              <p class="tiny">Same price all year. Members get 20% off. Prices in ZAR, incl. VAT where applicable.</p>
+              <a class="btn btn-primary" href="#contact" data-plan="Meeting / workshop space">Enquire about space hire</a>
+              </div>
+            </details>
+          </article>
 
-          <div class="tab-panel plan" role="tabpanel" id="storage" aria-labelledby="ex-t2" hidden>
+          <article class="plan extra-card" id="storage" aria-labelledby="storage-title">
             <div class="plan-head">
               <span class="plan-icon"><svg aria-hidden="true"><use href="#i-package"/></svg></span>
               <div>
+                <p class="extra-label">Nomad storage</p>
                 <h3 id="storage-title">Off chasing summer? Leave your stuff with us.</h3>
                 <p>Spending the Cape Town winter somewhere sunnier? Store your suitcases, boxes and bits safely at the house until you're back.</p>
               </div>
             </div>
-            <div class="storage-prices">
-              <div class="sp"><span class="sp-label">Per bag or box</span><span class="opt-price">R295 <small>/ month</small></span><span class="sp-note">Any time of year, month to month</span></div>
-              <div class="sp sp-best"><span class="sp-label">Winter season bundle</span><span class="opt-price">R2,450 <small>/ season</small></span><span class="sp-note">Up to 2 bags or boxes, 1 May&ndash;31 Oct. Extra items R895 each.</span></div>
-            </div>
-            <details class="more">
-              <summary>How it works &amp; good to know</summary>
-              <div class="more-body">
-                <ol class="mini-steps">
-                  <li><strong>Tell us what you're storing:</strong> roughly how many bags or boxes, and your dates away.</li>
-                  <li><strong>Drop off at the house:</strong> pack and label your things, and we log each item with you.</li>
-                  <li><strong>Go explore:</strong> your belongings stay in a dedicated, lockable storage space at the house.</li>
-                  <li><strong>Welcome back!</strong> Let us know when you land, then pop in to collect (and stay for a coffee).</li>
-                </ol>
-                <p class="tiny">No food, liquids, valuables, cash or hazardous items. Size and weight limits apply per item; we confirm them when you enquire. Please keep your own travel or contents insurance. You get our simple storage terms to agree before drop-off. Members get 20% off storage. Prices in ZAR, incl. VAT where applicable.</p>
+            <details class="extra-more">
+              <summary class="btn btn-outline">Prices &amp; details</summary>
+              <div class="extra-body">
+              <div class="storage-prices">
+                <div class="sp"><span class="sp-label">Per bag or box</span><span class="opt-price">R295 <small>/ month</small></span><span class="sp-note">Any time of year, month to month</span></div>
+                <div class="sp sp-best"><span class="sp-label">Winter season bundle</span><span class="opt-price">R2,450 <small>/ season</small></span><span class="sp-note">Up to 2 bags or boxes, 1 May&ndash;31 Oct. Extra items R895 each.</span></div>
+              </div>
+              <details class="more">
+                <summary>How it works &amp; good to know</summary>
+                <div class="more-body">
+                  <ol class="mini-steps">
+                    <li><strong>Tell us what you're storing:</strong> roughly how many bags or boxes, and your dates away.</li>
+                    <li><strong>Drop off at the house:</strong> pack and label your things, and we log each item with you.</li>
+                    <li><strong>Go explore:</strong> your belongings stay in a dedicated, lockable storage space at the house.</li>
+                    <li><strong>Welcome back!</strong> Let us know when you land, then pop in to collect (and stay for a coffee).</li>
+                  </ol>
+                  <p class="tiny">No food, liquids, valuables, cash or hazardous items. Size and weight limits apply per item; we confirm them when you enquire. Please keep your own travel or contents insurance. You get our simple storage terms to agree before drop-off. Members get 20% off storage. Prices in ZAR, incl. VAT where applicable.</p>
+                </div>
+              </details>
+              <a class="btn btn-primary" href="#contact" data-plan="Nomad storage">Reserve storage space</a>
               </div>
             </details>
-            <a class="btn btn-primary" href="#contact" data-plan="Nomad storage">Reserve storage space</a>
-          </div>
+          </article>
 
-          <div class="tab-panel plan" role="tabpanel" id="luggage-drop" aria-labelledby="ex-t3" hidden>
+          <article class="plan extra-card" id="luggage-drop" aria-labelledby="luggage-title">
             <div class="plan-head">
               <span class="plan-icon"><svg aria-hidden="true"><use href="#i-lock"/></svg></span>
               <div>
+                <p class="extra-label">Luggage drop</p>
                 <h3 id="luggage-title">Luggage drop: a few hours or a few days</h3>
                 <p>Checked out but flying tonight? Drop your bags at the house and enjoy the Prom without them. No app, no platform fees.</p>
               </div>
             </div>
-            <div class="ld-table" role="table" aria-label="Luggage drop prices per bag">
-              <div class="ld-row ld-th" role="row"><span role="columnheader">Per bag</span><span role="columnheader">Small <small>backpack, carry-on</small></span><span role="columnheader">Large <small>checked suitcase</small></span><span role="columnheader">Odd-size <small>surfboard, bike box</small></span></div>
-              <div class="ld-row" role="row"><span role="rowheader">Up to 4 hours</span><b role="cell" data-l="Small">R65</b><b role="cell" data-l="Large">R80</b><b role="cell" data-l="Odd-size">R110</b></div>
-              <div class="ld-row" role="row"><span role="rowheader">Day <small>(up to 24 h)</small></span><b role="cell" data-l="Small">R95</b><b role="cell" data-l="Large">R120</b><b role="cell" data-l="Odd-size">R160</b></div>
-              <div class="ld-row" role="row"><span role="rowheader">Each extra day</span><b role="cell" data-l="Small">R75</b><b role="cell" data-l="Large">R95</b><b role="cell" data-l="Odd-size">R130</b></div>
-            </div>
-            <details class="more">
-              <summary>How it works</summary>
-              <div class="more-body">
-                <ol class="mini-steps">
-                  <li><strong>Book</strong> through the contact form (choose &ldquo;Luggage drop&rdquo;) and we confirm your slot.</li>
-                  <li><strong>Drop off</strong> during opening hours. We share them when we confirm.</li>
-                  <li><strong>Sealed &amp; tagged:</strong> each bag gets a numbered tag and you keep the matching stub.</li>
-                  <li><strong>Collect</strong> during opening hours with your stub.</li>
-                </ol>
-                <p class="tiny">No valuables, cash, laptops, passports, food or liquids. Leaving bags for more than a few days? Monthly nomad storage (R295 per bag) works out cheaper. Limited space, so please book ahead. Members get 20% off. Prices in ZAR, incl. VAT where applicable.</p>
+            <details class="extra-more">
+              <summary class="btn btn-outline">Prices &amp; details</summary>
+              <div class="extra-body">
+              <div class="ld-table" role="table" aria-label="Luggage drop prices per bag">
+                <div class="ld-row ld-th" role="row"><span role="columnheader">Per bag</span><span role="columnheader">Small <small>backpack, carry-on</small></span><span role="columnheader">Large <small>checked suitcase</small></span><span role="columnheader">Odd-size <small>surfboard, bike box</small></span></div>
+                <div class="ld-row" role="row"><span role="rowheader">Up to 4 hours</span><b role="cell" data-l="Small">R65</b><b role="cell" data-l="Large">R80</b><b role="cell" data-l="Odd-size">R110</b></div>
+                <div class="ld-row" role="row"><span role="rowheader">Day <small>(up to 24 h)</small></span><b role="cell" data-l="Small">R95</b><b role="cell" data-l="Large">R120</b><b role="cell" data-l="Odd-size">R160</b></div>
+                <div class="ld-row" role="row"><span role="rowheader">Each extra day</span><b role="cell" data-l="Small">R75</b><b role="cell" data-l="Large">R95</b><b role="cell" data-l="Odd-size">R130</b></div>
+              </div>
+              <details class="more">
+                <summary>How it works</summary>
+                <div class="more-body">
+                  <ol class="mini-steps">
+                    <li><strong>Book</strong> through the contact form (choose &ldquo;Luggage drop&rdquo;) and we confirm your slot.</li>
+                    <li><strong>Drop off</strong> during opening hours. We share them when we confirm.</li>
+                    <li><strong>Sealed &amp; tagged:</strong> each bag gets a numbered tag and you keep the matching stub.</li>
+                    <li><strong>Collect</strong> during opening hours with your stub.</li>
+                  </ol>
+                  <p class="tiny">No valuables, cash, laptops, passports, food or liquids. Leaving bags for more than a few days? Monthly nomad storage (R295 per bag) works out cheaper. Limited space, so please book ahead. Members get 20% off. Prices in ZAR, incl. VAT where applicable.</p>
+                </div>
+              </details>
+              <a class="btn btn-primary" href="#contact" data-plan="Luggage drop">Book a luggage drop</a>
               </div>
             </details>
-            <a class="btn btn-primary" href="#contact" data-plan="Luggage drop">Book a luggage drop</a>
-          </div>
+          </article>
 
-          <div class="tab-panel plan" role="tabpanel" id="cobarking" aria-labelledby="ex-t4" hidden>
+          <article class="plan extra-card" id="cobarking" aria-labelledby="cobarking-title">
             <div class="plan-head">
               <span class="plan-icon"><svg aria-hidden="true"><use href="#i-paw"/></svg></span>
               <div>
+                <p class="extra-label">Dogs 🐾</p>
                 <h3 id="cobarking-title">Bring your dog to work. We'll mind them when you can't.</h3>
-                <p>Your dog can lie under your desk or hang out in the garden while you work. <strong>Free</strong> on an annual hot desk or private office membership; everyone else pays <strong>R95 per day</strong> or <strong>R950 per month</strong> per dog.</p>
+                <p>Your dog can lie under your desk or hang out in the garden while you work.</p>
               </div>
             </div>
-            <ul class="hire-rates cb-rates">
-              <li><span>Pet sitting, per hour <small>(1 hour min.)</small></span><b>R120</b></li>
-              <li><span>Half day <small>(up to 4 hours)</small></span><b>R250</b></li>
-              <li><span>Full day <small>(up to 9 hours)</small></span><b>R380</b></li>
-              <li><span>Monthly weekdays <small>(up to 20 full days)</small></span><b>R3,800</b></li>
-            </ul>
-            <details class="more">
-              <summary>Details &amp; house rules</summary>
-              <div class="more-body">
-                <p>Pet sitting: we look after your dog at the house while you're busy, or while you're not at the house at all. Supervision, fresh water, garden play and short walks. No membership needed. Per dog, any size; a second dog is +50%.</p>
-                <p><strong>Yearly members: free pet sitting for one dog</strong> during opening hours (subject to space).</p>
-                <p>&ldquo;Well-behaved&rdquo; means: vaccinations up to date (please bring proof), friendly with people and other dogs, and house-trained. One dog per member unless agreed in advance, a few dogs at a time at most, so please book ahead. You remain liable for your dog. We meet every dog first.</p>
-                <p class="tiny">Prices in ZAR, incl. VAT where applicable. Launch prices, subject to change.</p>
+            <details class="extra-more">
+              <summary class="btn btn-outline">Prices &amp; details</summary>
+              <div class="extra-body">
+              <p><strong>Free</strong> on an annual hot desk or private office membership; everyone else pays <strong>R95 per day</strong> or <strong>R950 per month</strong> per dog.</p>
+              <ul class="hire-rates cb-rates">
+                <li><span>Pet sitting, per hour <small>(1 hour min.)</small></span><b>R120</b></li>
+                <li><span>Half day <small>(up to 4 hours)</small></span><b>R250</b></li>
+                <li><span>Full day <small>(up to 9 hours)</small></span><b>R380</b></li>
+                <li><span>Monthly weekdays <small>(up to 20 full days)</small></span><b>R3,800</b></li>
+              </ul>
+              <details class="more">
+                <summary>Details &amp; house rules</summary>
+                <div class="more-body">
+                  <p>Pet sitting: we look after your dog at the house while you're busy, or while you're not at the house at all. Supervision, fresh water, garden play and short walks. No membership needed. Per dog, any size; a second dog is +50%.</p>
+                  <p><strong>Yearly members: free pet sitting for one dog</strong> during opening hours (subject to space).</p>
+                  <p>&ldquo;Well-behaved&rdquo; means: vaccinations up to date (please bring proof), friendly with people and other dogs, and house-trained. One dog per member unless agreed in advance, a few dogs at a time at most, so please book ahead. You remain liable for your dog. We meet every dog first.</p>
+                  <p class="tiny">Prices in ZAR, incl. VAT where applicable. Launch prices, subject to change.</p>
+                </div>
+              </details>
+              <a class="btn btn-primary" href="#contact" data-plan="Pet sitting">Book pet sitting</a>
+              <a class="fit-link" href="/dog-friendly-coworking-cape-town/">Dog-friendly coworking <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
               </div>
             </details>
-            <a class="btn btn-primary" href="#contact" data-plan="Pet sitting">Book pet sitting</a>
-            <a class="fit-link" href="/dog-friendly-coworking-cape-town/">Dog-friendly coworking <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-          </div>
+          </article>
         </div>
       </div>
     </section>

@@ -231,6 +231,8 @@
     }
     var d = el.closest("details");
     if (d && !d.open) d.open = true;
+    var inner = el.querySelector && el.querySelector(":scope > details.extra-more");
+    if (inner && !inner.open) inner.open = true;
   };
   document.addEventListener("click", function (e) {
     var a = e.target.closest('a[href^="#"]');
