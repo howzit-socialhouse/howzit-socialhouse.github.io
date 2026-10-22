@@ -1037,6 +1037,7 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
   .social-bento + .s-learn { margin-top: 10px; }
   .social-foot .breakfast-line { border-radius: var(--r); align-items: flex-start; padding: 14px 16px; text-align: left; }
   .week-toggle > summary { font-size: .9rem; white-space: nowrap; padding: 10px 14px 10px 14px; gap: 8px; }
+}
 
 /* ---------- Extras: compact cards, prices & details behind a toggle (extras-design) ---------- */
 .extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; max-width: 1040px; margin: 0 auto; }
