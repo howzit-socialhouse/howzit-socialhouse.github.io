@@ -68,7 +68,7 @@ Every "Book / Enquire" button that has a `data-plan` attribute pre-selects the m
 | Location | `#location`, contact list, footer, JSON-LD `address` | **Sea Point, Cape Town only** (by design, for privacy). Map = static OpenStreetMap image of the whole Sea Point area, no marker. |
 | **Formspree endpoint** | `index.html`, `action` of `#booking-form` | `FORMSPREE_ENDPOINT_PLACEHOLDER` → replace with `https://formspree.io/f/<form-id>` |
 | Photos | `assets/img/*.jpg` | Real photos of the house (`real-*.jpg`) plus AI-styled visualisations (`*-800.jpg` / `*-1280.jpg`). Update the `alt` text and `CREDITS.md` when you swap them. |
-| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-21` (12 URLs) |
+| Sitemap date | `sitemap.xml` `<lastmod>` | `2026-10-22` (11 URLs) |
 
 ### Map (privacy)
 The `#location` map is a self-hosted static image of OpenStreetMap tiles of the Sea Point area (no marker; the OSM iframe embed was dropped because it now needs WebGL and rendered as an empty box in some browsers) and the "Open larger map" link is a search for "Sea Point, Cape Town". Please keep it that way: don't swap in a pinned embed of the house.
