@@ -3,6 +3,22 @@
   "use strict";
   document.documentElement.classList.add("js");
 
+  /* GA4 events (G-4FQ6NP60Y5). Safe no-op if gtag is missing or blocked. */
+  var track = function (name, params) {
+    if (typeof window.gtag !== "function") return;
+    try { window.gtag("event", name, params); } catch (err) { /* ignore */ }
+  };
+  /* WhatsApp clicks: one delegated listener covers the floating button and inline links on every page */
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a[href*="wa.me/"], a[href*="api.whatsapp.com/"]') : null;
+    if (!a) return;
+    track("whatsapp_click", {
+      link_location: a.closest(".wa-float") ? "floating" : "inline",
+      page_path: location.pathname,
+      transport_type: "beacon"
+    });
+  }, true);
+
   var header = document.querySelector(".site-header");
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.getElementById("site-nav");
@@ -150,6 +166,7 @@
     })
       .then(function (res) {
         if (res.ok) {
+          track("generate_lead", { form_offer: offer, form_plan: plan, form_interest: interest, page_path: location.pathname });
           form.reset();
           if (form.elements.plan) form.elements.plan.value = "";
           setStatus("Howzit! Thanks " + firstName + ", your message is on its way. We aim to reply within 24 hours.", "success");
@@ -371,6 +388,7 @@
       fetch(aForm.action, { method: "POST", headers: { "Accept": "application/json" }, body: new FormData(aForm) })
         .then(function (res) {
           if (!res.ok) throw new Error(res.status);
+          track("generate_lead", { form_offer: "Co-living", form_plan: room.value, form_interest: "Co-living", page_path: location.pathname });
           aSet("Howzit! Thanks " + (nm.value.trim().split(" ")[0] || "") + ", your request for " + summary + " is on its way. We aim to reply within 24 hours.", "success");
         })
         .catch(function () {
