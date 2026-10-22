@@ -83,6 +83,7 @@
       {"@type": "LocationFeatureSpecification", "name": "Private offices", "value": true},
       {"@type": "LocationFeatureSpecification", "name": "Parking: 2 parking bays available", "value": true},
       {"@type": "LocationFeatureSpecification", "name": "Luggage and belongings storage", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Nomad services: introductions to trusted local partners for relocation, visa support, airport transfers and excursions", "value": true},
       {"@type": "LocationFeatureSpecification", "name": "Pet-friendly: well-behaved dogs welcome (free for annual coworking or private office members; R95/day or R950/month pet fee for everyone else)", "value": true}
     ],
     "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Howzit? prices (ZAR, launch prices)", "itemListElement": [{"@type": "Offer", "name": "Hot desk day pass (summer, Nov-Apr)", "price": "395", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Hot desk day pass (winter, May-Oct)", "price": "325", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Hot desk 10-day pack", "price": "2950", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Hot desk monthly (summer)", "price": "3650", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Hot desk monthly (winter)", "price": "2850", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Summer season pass (3 months, Nov-Apr)", "price": "9950", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Hot desk yearly membership (per month)", "price": "2750", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Private office 1 or 2, for teams of up to 6 (12-month lease, per month)", "price": "18000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Private office 1 or 2, for teams of up to 6 (month to month)", "price": "20000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Private office 3 with en-suite bathroom, up to 8 people (12-month lease, per month)", "price": "22000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Private office 3 with en-suite bathroom, up to 8 people (month to month)", "price": "24000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Day office (up to 3 people)", "price": "950", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Pet fee per day (free for annual members)", "price": "95", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Pet fee per month (free for annual members)", "price": "950", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Day pass + dog (summer)", "price": "490", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Day pass + dog (winter)", "price": "420", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Pet sitting per hour", "price": "120", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Pet sitting full day", "price": "380", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Nomad storage per bag per month", "price": "295", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Winter season storage bundle (2 items)", "price": "2450", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Luggage drop from (small bag, 4 hours)", "price": "65", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Co-living en-suite room (per day)", "price": "1400", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Co-living en-suite room (per month)", "price": "22000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Co-living room with shared bathroom (per day)", "price": "1000", "priceCurrency": "ZAR"}, {"@type": "Offer", "name": "Co-living room with shared bathroom (per month)", "price": "18000", "priceCurrency": "ZAR"}]},
@@ -660,6 +661,32 @@
               </div>
             </details>
           </article>
+
+          <article class="plan extra-card" id="nomad-services" aria-labelledby="nomad-services-title">
+            <div class="plan-head">
+              <span class="plan-icon"><svg aria-hidden="true"><use href="#i-nav"/></svg></span>
+              <div>
+                <p class="extra-label">Nomad services</p>
+                <h3 id="nomad-services-title">Just landed? We'll help you settle in.</h3>
+                <p>New to Cape Town? We know good people for the practical bits, so you can find your feet faster.</p>
+              </div>
+            </div>
+            <details class="extra-more">
+              <summary class="btn btn-outline">Details</summary>
+              <div class="extra-body">
+              <p>We can connect you with trusted local partners for:</p>
+              <ul class="checks">
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Relocation help</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Immigration &amp; visa support</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Airport transfers</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Meet &amp; greet on arrival</li>
+                <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Excursions around Cape Town</li>
+              </ul>
+              <p class="tiny">Just ask when you enquire and we'll put you in touch.</p>
+              <a class="btn btn-primary" href="#contact" data-plan="Nomad services">Ask about nomad services</a>
+              </div>
+            </details>
+          </article>
         </div>
       </div>
     </section>
@@ -751,6 +778,7 @@
               <label><input type="radio" name="interest" value="Storage"><span>Storage</span></label>
               <label><input type="radio" name="interest" value="Luggage drop"><span>Luggage drop</span></label>
               <label><input type="radio" name="interest" value="Pet sitting"><span>Pet sitting</span></label>
+              <label><input type="radio" name="interest" value="Nomad services"><span>Nomad services</span></label>
               <label><input type="radio" name="interest" value="Events"><span>Events</span></label>
               <label><input type="radio" name="interest" value="Other"><span>Other</span></label>
             </fieldset>

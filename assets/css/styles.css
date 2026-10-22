@@ -1058,6 +1058,7 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
 .extra-card:has(> .extra-more[open]) { grid-column: 1 / -1; }
 .extra-body > .btn-primary { margin-top: 6px; }
 .extra-body > .fit-link { margin: 14px 0 0 0; display: flex; }
+.extra-body > .checks { margin: 0 0 14px; }
 @media (max-width: 860px) {
   .extras-grid { grid-template-columns: 1fr; gap: 12px; }
 }
