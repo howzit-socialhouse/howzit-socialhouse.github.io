@@ -1064,3 +1064,11 @@ html:not(.js) .season-toggle, html:not(.js) .season-note { display: none; }
   .extra-body > .btn-primary { width: 100%; }
   .extra-card .storage-prices { grid-template-columns: 1fr; }
 }
+
+/* ---------- Contact: info items hidden, form on its own, centred (contact-design) ---------- */
+.contact-list[hidden] { display: none; }
+.contact-solo { grid-template-columns: 1fr; max-width: 820px; gap: clamp(24px, 3vw, 36px); }
+.contact-solo .contact-info { text-align: center; }
+.contact-solo .contact-info .section-sub { max-width: 34em; margin-left: auto; margin-right: auto; }
+.contact-solo .form-card { background: var(--cream); box-shadow: var(--shadow); }
+.contact-solo .form-card::before { right: -26px; top: -26px; }

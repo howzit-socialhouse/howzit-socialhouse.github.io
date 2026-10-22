@@ -706,12 +706,13 @@
 
     <!-- ============ CONTACT / BOOKING ============ -->
     <section class="section section-sand" id="contact" aria-labelledby="contact-title">
-      <div class="container contact-grid">
+      <div class="container contact-grid contact-solo">
         <div class="contact-info">
           <p class="eyebrow">Book &amp; contact</p>
           <h2 id="contact-title">Howzit! <em>Come say hello.</em></h2>
           <p class="section-sub">Book a visit, a day pass, an office viewing or storage space, or just ask us anything.</p>
-          <ul class="contact-list">
+          <!-- HIDDEN 22 Oct 2026 at Yuli's request (repeats the map and the floating WhatsApp button); remove the hidden attribute to restore -->
+          <ul class="contact-list" hidden aria-hidden="true">
             <li>
               <span class="contact-icon"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
               <span><strong>Reply time</strong><span class="contact-val">We aim to reply within 24 hours</span></span>
