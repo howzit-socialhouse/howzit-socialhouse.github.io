@@ -392,7 +392,7 @@
           aSet("Howzit! Thanks " + (nm.value.trim().split(" ")[0] || "") + ", your request for " + summary + " is on its way. We aim to reply within 24 hours.", "success");
         })
         .catch(function () {
-          var wa = "https://wa.me/34689263293?text=" + encodeURIComponent("Hi Howzit! I'd like to check co-living availability: " + summary + ". " + nm.value.trim());
+          var wa = "https://wa.me/27710347336?text=" + encodeURIComponent("Hi Howzit! I'd like to check co-living availability: " + summary + ". " + nm.value.trim());
           aSet('Eish, something went wrong and your request wasn\'t sent. Please try again, or <a href="' + wa + '" target="_blank" rel="noopener">send it on WhatsApp</a>.', "error");
         })
         .then(function () { aBtn.disabled = false; aBtn.removeAttribute("aria-busy"); aBtn.innerHTML = aBtnHTML; });
