@@ -1,10 +1,12 @@
 # Photos, illustrations & credits
 
-There are no stock photos on this site. Every image is either a real photo of the Howzit? house or an AI-styled visualisation of it, as the footer says: *"Some lifestyle images are AI-styled visualisations of the house."*
+There are no stock photos on this site. Gallery and room images are illustrative lookalikes (not photos of the exact house). Lifestyle scenes are AI-styled visualisations. The footer notes that some images are AI-styled.
 
-## Real photos of the house
+## Illustrative lookalikes (property interiors & exterior)
 
-These are unstaged photos of the house in Sea Point. They have been cropped (to tame the wide-angle look) and lightly colour-graded (a little brighter and warmer). Nothing has been added or removed.
+As of 2026-11-03 the gallery and room images are **generated lookalikes**, not photographs of the actual Howzit? house. They show a similar sunny Sea Point garden-pool / Cape Town house mood, but trees, walls, pool shape and room layouts are deliberately different so the exact property cannot be identified. Alt text for these images starts with "Illustrative:". Filenames keep the historical `real-*` / `room-*-staged` prefixes for stable URLs. AI-styled lifestyle scenes (`pool-work`, `hot-desks`, etc.) were already generated and remain as-is.
+
+## Lookalike files (formerly real / staged photos)
 
 | File | Shows | Used in |
 |---|---|---|
@@ -15,22 +17,15 @@ These are unstaged photos of the house in Sea Point. They have been cropped (to 
 | `real-exterior.jpg` (+ `-600`) | The single-storey house | Gallery |
 | `real-fireplace-room.jpg` (+ `-600`) | Room with fireplace | Gallery |
 | `real-french-doors.jpg` (+ `-600`) | Room with French doors to the garden | Gallery |
-| `real-long-room.jpg` (+ `-600`) | Long room | Gallery |
 | `real-kitchen.jpg` (+ `-600`) | Kitchen | Gallery |
-| `room-ensuite-real.jpg` (+ `-600`) | The en-suite bedroom, empty (built-in wardrobes, door to its bathroom) | Kept as the unstaged source; not currently shown |
-| `room-shared-real.jpg` (+ `-600`) | A bedroom with a shared bathroom, empty (big front windows) | Kept as the unstaged source; not currently shown |
-| `room-shared-2-real.jpg` (+ `-600`) | A second shared-bathroom bedroom, empty (built-in wardrobes) | Kept as the unstaged source; not currently shown |
 
-## Virtually staged bedroom photos
+## Bedroom lookalikes (filenames still `room-*-staged`)
 
-These are virtually staged versions of the real Property24 listing photos of the bedrooms above: minimal furniture (bed, bedside table, lamp, rug, plants) was added digitally. The room itself (walls, floors, windows, wardrobes, doors) is unchanged. Cropped to 16:11.
+Generated furnished-bedroom lookalikes used on the co-living pages. Not photographs of the real rooms.
 
 | File | Staged from | Used in |
 |---|---|---|
-| `room-ensuite-staged.jpg` (+ `-600`) | `room-ensuite-real.jpg` | Co-living card (en-suite), co-living page |
-| `room-shared-staged.jpg` (+ `-600`) | `room-shared-real.jpg` | Co-living card (shared bathroom) |
-| `room-shared-2-staged.jpg` (+ `-600`) | `room-shared-2-real.jpg` | "Take a peek inside the house" gallery |
-
+| `room-ensuite-staged.jpg` (+ `-600`) | `room-shared-staged.jpg` (+ `-600`) | `room-shared-2-staged.jpg` (+ `-600`) 
 For privacy, the site only ever says "Sea Point, Cape Town": no street address, house number, postal code, coordinates or listing links.
 
 ## AI-styled visualisations
